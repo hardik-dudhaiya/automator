@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "E:\\Work\\Android\\automator\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\battery_level_constraint_dialog.xml",
+        "source": "E:\\Work\\Android\\automator\\app\\src\\main\\res\\layout\\battery_level_constraint_dialog.xml"
+    },
+    {
+        "merged": "E:\\Work\\Android\\automator\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\battery_saver_trigger_dialog.xml",
+        "source": "E:\\Work\\Android\\automator\\app\\src\\main\\res\\layout\\battery_saver_trigger_dialog.xml"
+    },
+    {
+        "merged": "E:\\Work\\Android\\automator\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\power_button_trigger_dialog.xml",
+        "source": "E:\\Work\\Android\\automator\\app\\src\\main\\res\\layout\\power_button_trigger_dialog.xml"
+    },
+    {
+        "merged": "E:\\Work\\Android\\automator\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\power_connection_trigger_dialog.xml",
+        "source": "E:\\Work\\Android\\automator\\app\\src\\main\\res\\layout\\power_connection_trigger_dialog.xml"
+    },
+    {
+        "merged": "E:\\Work\\Android\\automator\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\battery_increase_decrease_dialog.xml",
+        "source": "E:\\Work\\Android\\automator\\app\\src\\main\\res\\layout\\battery_increase_decrease_dialog.xml"
+    }
+]

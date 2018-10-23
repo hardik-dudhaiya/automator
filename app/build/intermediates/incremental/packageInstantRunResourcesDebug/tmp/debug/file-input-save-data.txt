@@ -1,0 +1,11 @@
+#Internal package file, do not edit.
+#Sun Oct 21 16:47:28 IST 2018
+1.base=D\:\\Projects\\Android\\automater\\app\\build\\intermediates\\assets\\debug
+0.baseType=DIRECTORY
+1.baseType=DIRECTORY
+count=2
+1.set=ASSET
+0.path=fonts/BebasNeue.ttf
+0.set=ASSET
+0.base=D\:\\Projects\\Android\\automater\\app\\build\\intermediates\\assets\\debug
+1.path=fonts/Poppins.otf

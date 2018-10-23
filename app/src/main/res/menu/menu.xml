@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:id="@+id/home">
+        <item
+            android:id="@+id/upgrade_to_pro"
+            android:icon="@drawable/upgrade_to_pro"
+            android:title="Upgrade to Pro" />
+        <item
+            android:id="@+id/get_more_macro"
+            android:icon="@drawable/get_more_macros"
+            android:title="Get More Macros" />
+
+    </group>
+
+
+    <group android:id="@+id/groupmenu_one">
+
+
+        <item
+            android:id="@+id/variable"
+            android:icon="@drawable/variables"
+            android:title="Variable" />
+        <item
+            android:id="@+id/cekk_towers"
+            android:icon="@drawable/cekk_towers"
+            android:title="Cekk Towers" />
+        <item
+            android:id="@+id/geofences"
+            android:icon="@drawable/geofences"
+            android:title="Geofences" />
+        <item
+            android:id="@+id/stopwatches"
+            android:icon="@drawable/stopwatches"
+            android:title="Stopwatches" />
+        <item
+            android:id="@+id/automater_drawer"
+            android:icon="@drawable/automator_drawer"
+            android:title="Automotor Drawer" />
+
+    </group>
+
+
+    <group android:id="@+id/groupmenu_two">
+        <item
+            android:id="@+id/system_log"
+            android:icon="@drawable/system_log"
+            android:title="System Log" />
+        <item
+            android:id="@+id/user_log"
+            android:icon="@drawable/user_log"
+            android:title="User Log" />
+
+    </group>
+
+    <group android:id="@+id/groupmenu_three">
+        <item
+            android:id="@+id/help"
+            android:icon="@drawable/help"
+            android:title="Help" />
+        <item
+            android:id="@+id/invite_friend"
+            android:icon="@drawable/invite_friends"
+            android:title="Invite Friends" />
+        <item
+            android:id="@+id/blog"
+            android:icon="@drawable/blog"
+            android:title="Blog" />
+        <item
+            android:id="@+id/transaction"
+            android:icon="@drawable/translations"
+            android:title="Translations" />
+        <item
+            android:id="@+id/donate"
+            android:icon="@drawable/donate"
+            android:title="Donate" />
+
+    </group>
+<group android:id="@+id/groupmenu_four">
+
+    <item android:title="" />
+</group>
+
+</menu>
