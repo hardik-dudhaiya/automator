@@ -8,9 +8,6 @@ import android.content.pm.PackageManager;
 import android.support.v7.app.AlertDialog;
 import android.widget.ArrayAdapter;
 
-import com.smileparser.automator.Activity.CreateActivity;
-import com.smileparser.automator.database.DatabaseHelper;
-
 import java.util.List;
 
 /**

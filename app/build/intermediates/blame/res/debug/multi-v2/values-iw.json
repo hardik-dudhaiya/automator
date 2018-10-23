@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\Work\\Android\\automator\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-iw\\values-iw.xml",
+            "outputFile": "D:\\Git\\Automator\\automator\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-iw\\values-iw.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Hardik Dudhaiya\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\9856324fa3698c99cd9feb0436937aea\\res\\values-iw\\values-iw.xml",
+                    "source": "C:\\Users\\Lucifer\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\ce272d866aaeff87275f7548ea622dad\\res\\values-iw\\values-iw.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Hardik Dudhaiya\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\83b5ae6ab6c7e9c7fceb4378be4f3b2a\\res\\values-iw\\values-iw.xml",
+                    "source": "C:\\Users\\Lucifer\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\399f65340598e54e9edd65e797381d5d\\res\\values-iw\\values-iw.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

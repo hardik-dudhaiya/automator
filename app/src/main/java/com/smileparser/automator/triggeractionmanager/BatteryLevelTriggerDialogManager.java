@@ -8,9 +8,7 @@ import android.view.LayoutInflater;
 import android.widget.ArrayAdapter;
 import android.widget.SeekBar;
 
-import com.smileparser.automator.Activity.CreateActivity;
 import com.smileparser.automator.R;
-import com.smileparser.automator.database.DatabaseHelper;
 import com.smileparser.automator.databinding.BatteryIncreaseDecreaseDialogBinding;
 
 /**

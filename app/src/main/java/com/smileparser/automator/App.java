@@ -11,16 +11,22 @@ public class App extends Application {
     @SuppressLint("StaticFieldLeak")
     private static Context mContext;
 
-    @Override
-    public void onCreate() {
-        super.onCreate();
-        mContext = this;
+    @SuppressLint("StaticFieldLeak")
+    private static App mInstance;
 
-        Stetho.initializeWithDefaults(this);
+    public static synchronized App getInstance() {
+        return mInstance;
     }
 
     public static Context getContext() {
         return mContext;
     }
 
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        mContext = this;
+        mInstance = this;
+        Stetho.initializeWithDefaults(this);
+    }
 }

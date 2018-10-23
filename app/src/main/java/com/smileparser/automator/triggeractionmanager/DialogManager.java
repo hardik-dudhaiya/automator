@@ -2,7 +2,7 @@ package com.smileparser.automator.triggeractionmanager;
 
 import android.content.Context;
 
-import com.smileparser.automator.Activity.CreateActivity;
+import com.smileparser.automator.activity.CreateActivity;
 import com.smileparser.automator.database.DatabaseHelper;
 
 /**

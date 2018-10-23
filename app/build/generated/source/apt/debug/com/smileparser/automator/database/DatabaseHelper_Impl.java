@@ -112,7 +112,7 @@ public class DatabaseHelper_Impl extends DatabaseHelper {
         final TableInfo _infoCategory = new TableInfo("Category", _columnsCategory, _foreignKeysCategory, _indicesCategory);
         final TableInfo _existingCategory = TableInfo.read(_db, "Category");
         if (! _infoCategory.equals(_existingCategory)) {
-          throw new IllegalStateException("Migration didn't properly handle Category(com.smileparser.automater.triggeractionmanager.Category).\n"
+          throw new IllegalStateException("Migration didn't properly handle Category(com.smileparser.automator.triggeractionmanager.Category).\n"
                   + " Expected:\n" + _infoCategory + "\n"
                   + " Found:\n" + _existingCategory);
         }
@@ -125,7 +125,7 @@ public class DatabaseHelper_Impl extends DatabaseHelper {
         final TableInfo _infoTrigger = new TableInfo("Trigger", _columnsTrigger, _foreignKeysTrigger, _indicesTrigger);
         final TableInfo _existingTrigger = TableInfo.read(_db, "Trigger");
         if (! _infoTrigger.equals(_existingTrigger)) {
-          throw new IllegalStateException("Migration didn't properly handle Trigger(com.smileparser.automater.triggeractionmanager.Trigger).\n"
+          throw new IllegalStateException("Migration didn't properly handle Trigger(com.smileparser.automator.triggeractionmanager.Trigger).\n"
                   + " Expected:\n" + _infoTrigger + "\n"
                   + " Found:\n" + _existingTrigger);
         }
@@ -138,7 +138,7 @@ public class DatabaseHelper_Impl extends DatabaseHelper {
         final TableInfo _infoAction = new TableInfo("Action", _columnsAction, _foreignKeysAction, _indicesAction);
         final TableInfo _existingAction = TableInfo.read(_db, "Action");
         if (! _infoAction.equals(_existingAction)) {
-          throw new IllegalStateException("Migration didn't properly handle Action(com.smileparser.automater.triggeractionmanager.Action).\n"
+          throw new IllegalStateException("Migration didn't properly handle Action(com.smileparser.automator.triggeractionmanager.Action).\n"
                   + " Expected:\n" + _infoAction + "\n"
                   + " Found:\n" + _existingAction);
         }
@@ -150,7 +150,7 @@ public class DatabaseHelper_Impl extends DatabaseHelper {
         final TableInfo _infoMacro = new TableInfo("Macro", _columnsMacro, _foreignKeysMacro, _indicesMacro);
         final TableInfo _existingMacro = TableInfo.read(_db, "Macro");
         if (! _infoMacro.equals(_existingMacro)) {
-          throw new IllegalStateException("Migration didn't properly handle Macro(com.smileparser.automater.triggeractionmanager.Macro).\n"
+          throw new IllegalStateException("Migration didn't properly handle Macro(com.smileparser.automator.triggeractionmanager.Macro).\n"
                   + " Expected:\n" + _infoMacro + "\n"
                   + " Found:\n" + _existingMacro);
         }
@@ -165,7 +165,7 @@ public class DatabaseHelper_Impl extends DatabaseHelper {
         final TableInfo _infoTriggerDetails = new TableInfo("TriggerDetails", _columnsTriggerDetails, _foreignKeysTriggerDetails, _indicesTriggerDetails);
         final TableInfo _existingTriggerDetails = TableInfo.read(_db, "TriggerDetails");
         if (! _infoTriggerDetails.equals(_existingTriggerDetails)) {
-          throw new IllegalStateException("Migration didn't properly handle TriggerDetails(com.smileparser.automater.triggeractionmanager.TriggerDetails).\n"
+          throw new IllegalStateException("Migration didn't properly handle TriggerDetails(com.smileparser.automator.triggeractionmanager.TriggerDetails).\n"
                   + " Expected:\n" + _infoTriggerDetails + "\n"
                   + " Found:\n" + _existingTriggerDetails);
         }
@@ -180,7 +180,7 @@ public class DatabaseHelper_Impl extends DatabaseHelper {
         final TableInfo _infoActionDetails = new TableInfo("ActionDetails", _columnsActionDetails, _foreignKeysActionDetails, _indicesActionDetails);
         final TableInfo _existingActionDetails = TableInfo.read(_db, "ActionDetails");
         if (! _infoActionDetails.equals(_existingActionDetails)) {
-          throw new IllegalStateException("Migration didn't properly handle ActionDetails(com.smileparser.automater.triggeractionmanager.ActionDetails).\n"
+          throw new IllegalStateException("Migration didn't properly handle ActionDetails(com.smileparser.automator.triggeractionmanager.ActionDetails).\n"
                   + " Expected:\n" + _infoActionDetails + "\n"
                   + " Found:\n" + _existingActionDetails);
         }
@@ -193,7 +193,7 @@ public class DatabaseHelper_Impl extends DatabaseHelper {
         final TableInfo _infoConstraint = new TableInfo("Constraint", _columnsConstraint, _foreignKeysConstraint, _indicesConstraint);
         final TableInfo _existingConstraint = TableInfo.read(_db, "Constraint");
         if (! _infoConstraint.equals(_existingConstraint)) {
-          throw new IllegalStateException("Migration didn't properly handle Constraint(com.smileparser.automater.triggeractionmanager.Constraint).\n"
+          throw new IllegalStateException("Migration didn't properly handle Constraint(com.smileparser.automator.triggeractionmanager.Constraint).\n"
                   + " Expected:\n" + _infoConstraint + "\n"
                   + " Found:\n" + _existingConstraint);
         }
@@ -208,7 +208,7 @@ public class DatabaseHelper_Impl extends DatabaseHelper {
         final TableInfo _infoConstraintDetails = new TableInfo("ConstraintDetails", _columnsConstraintDetails, _foreignKeysConstraintDetails, _indicesConstraintDetails);
         final TableInfo _existingConstraintDetails = TableInfo.read(_db, "ConstraintDetails");
         if (! _infoConstraintDetails.equals(_existingConstraintDetails)) {
-          throw new IllegalStateException("Migration didn't properly handle ConstraintDetails(com.smileparser.automater.triggeractionmanager.ConstraintDetails).\n"
+          throw new IllegalStateException("Migration didn't properly handle ConstraintDetails(com.smileparser.automator.triggeractionmanager.ConstraintDetails).\n"
                   + " Expected:\n" + _infoConstraintDetails + "\n"
                   + " Found:\n" + _existingConstraintDetails);
         }

@@ -15,7 +15,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".Activity.Splashscreen"
+            android:name=".activity.Splashscreen"
             android:screenOrientation="sensorPortrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
@@ -25,14 +25,14 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Activity.MainActivity"
+            android:name=".activity.MainActivity"
             android:screenOrientation="sensorPortrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
-            android:name=".Activity.CreateActivity"
+            android:name=".activity.CreateActivity"
             android:screenOrientation="sensorPortrait" />
         <activity
-            android:name=".Activity.Previous_trigger_Activity"
+            android:name=".activity.Previous_trigger_Activity"
             android:screenOrientation="sensorPortrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
 
@@ -41,7 +41,7 @@
             android:enabled="true"
             android:exported="true" />
 
-        <activity android:name=".Activity.CreateMacroActivity"></activity>
+        <activity android:name=".activity.CreateMacroActivity" />
     </application>
 
 </manifest>

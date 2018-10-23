@@ -1,18 +1,12 @@
 package com.smileparser.automator.adapter;
 
 import android.content.Context;
-import android.content.Intent;
-import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.Toast;
 
-import com.smileparser.automator.Fragment.Inner_createnew_Fragment;
 import com.smileparser.automator.R;
 import com.smileparser.automator.utils.SecondaryTextView;
 

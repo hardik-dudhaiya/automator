@@ -8,16 +8,13 @@ import android.app.Service;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import android.content.IntentFilter;
-import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.IBinder;
 import android.support.annotation.Nullable;
 import android.support.v4.app.NotificationCompat;
 
-import com.smileparser.automator.Activity.MainActivity;
-import com.smileparser.automator.Activity.Splashscreen;
+import com.smileparser.automator.activity.Splashscreen;
 import com.smileparser.automator.R;
 import com.smileparser.automator.database.DatabaseHelper;
 

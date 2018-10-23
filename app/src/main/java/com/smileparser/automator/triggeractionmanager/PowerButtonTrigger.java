@@ -5,9 +5,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.util.Log;
-import android.view.KeyEvent;
-
-import com.smileparser.automator.Activity.CreateActivity;
 
 /**
  * Created by mayur on 8/10/18.
