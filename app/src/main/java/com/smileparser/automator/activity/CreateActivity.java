@@ -1,10 +1,10 @@
 package com.smileparser.automator.activity;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
@@ -12,9 +12,6 @@ import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
-import com.smileparser.automator.fragment.Actionfrag;
-import com.smileparser.automator.fragment.Constraintfrag;
-import com.smileparser.automator.fragment.Triggerfrag;
 import com.smileparser.automator.R;
 import com.smileparser.automator.database.DatabaseHelper;
 import com.smileparser.automator.triggeractionmanager.Macro;
@@ -25,6 +22,7 @@ import com.smileparser.automator.utils.Util;
 
 public class CreateActivity extends AppCompatActivity implements View.OnClickListener {
 
+    public Macro macro = new Macro();
     String sType;
     LinearLayout lnrToolbar;
     TextView txtTitle, txtPrevTitle;
@@ -32,10 +30,8 @@ public class CreateActivity extends AppCompatActivity implements View.OnClickLis
     ScrollView scrTrigger, scrActions, scrConstraints;
     FragmentManager fm;
     FragmentTransaction fragmentTransaction;
-    Triggerfrag createnewfrag;
-    Actionfrag actionfrag;
-    Constraintfrag constraintfrag;
-    public Macro macro = new Macro();
+    //Actionfrag actionfrag;
+    //Constraintfrag constraintfrag;
     private FloatingActionButton saveMacroFab;
 
     @Override
@@ -62,21 +58,20 @@ public class CreateActivity extends AppCompatActivity implements View.OnClickLis
 
         imgPreview = findViewById(R.id.imgPreview);
         imgTrigger.performClick();
-        createnewfrag = new Triggerfrag();
         fm = getSupportFragmentManager();
-        fragmentTransaction = fm.beginTransaction();
+        /*fragmentTransaction = fm.beginTransaction();
         fragmentTransaction.replace(R.id.frame, createnewfrag);
-        fragmentTransaction.commit();
+        fragmentTransaction.commit();*/
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.imgTriggers:
-                createnewfrag = new Triggerfrag();
+                /*createnewfrag = new Triggerfrag();
                 fm = getSupportFragmentManager();
                 fragmentTransaction = fm.beginTransaction();
-                fragmentTransaction.replace(R.id.frame, createnewfrag);
+                fragmentTransaction.replace(R.id.frame, createnewfrag);*/
                 fragmentTransaction.commit();
                 lnrToolbar.setBackgroundColor(getResources().getColor(R.color.red));
                 txtTitle.setText("Create New");
@@ -84,10 +79,10 @@ public class CreateActivity extends AppCompatActivity implements View.OnClickLis
                     @Override
                     public void onClick(View view) {
                         sType = "1";
-                        Intent intent = new Intent( CreateActivity.this, Previous_trigger_Activity.class );
-                        intent.putExtra( "Key", sType );
+                        Intent intent = new Intent(CreateActivity.this, Previous_trigger_Activity.class);
+                        intent.putExtra("Key", sType);
 
-                        startActivity( intent );
+                        startActivity(intent);
                     }
                 });
                 imgPreview.setImageResource(R.drawable.ic_preview_red);
@@ -104,12 +99,12 @@ public class CreateActivity extends AppCompatActivity implements View.OnClickLis
                 imgTrigger.setImageResource(R.drawable.ic_trigger_blue);
                 imgAction.setImageResource(R.drawable.ic_action_blue);
                 imgConstraints.setImageResource(R.drawable.ic_constraints_blue);
-                actionfrag = new Actionfrag();
+                // actionfrag = new Actionfrag();
                 fm = getSupportFragmentManager();
                 fragmentTransaction = fm.beginTransaction();
-                fragmentTransaction.replace(R.id.frame, actionfrag);
+                //fragmentTransaction.replace(R.id.frame, actionfrag);
                 fragmentTransaction.commit();
-                imgPreview.setOnClickListener( new View.OnClickListener() {
+                imgPreview.setOnClickListener(new View.OnClickListener() {
 
                     @Override
                     public void onClick(View view) {
@@ -128,10 +123,10 @@ public class CreateActivity extends AppCompatActivity implements View.OnClickLis
                 imgTrigger.setImageResource(R.drawable.ic_trigger_green);
                 imgAction.setImageResource(R.drawable.ic_action_green);
                 imgConstraints.setImageResource(R.drawable.ic_constraints_green);
-                constraintfrag = new Constraintfrag();
+                //constraintfrag = new Constraintfrag();
                 fm = getSupportFragmentManager();
                 fragmentTransaction = fm.beginTransaction();
-                fragmentTransaction.replace(R.id.frame, constraintfrag);
+                //fragmentTransaction.replace(R.id.frame, constraintfrag);
                 fragmentTransaction.commit();
                 imgPreview.setOnClickListener(new View.OnClickListener() {
                     @Override

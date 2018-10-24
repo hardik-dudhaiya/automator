@@ -14,7 +14,7 @@ import android.os.IBinder;
 import android.support.annotation.Nullable;
 import android.support.v4.app.NotificationCompat;
 
-import com.smileparser.automator.activity.Splashscreen;
+import com.smileparser.automator.activity.ActivitySplashPage;
 import com.smileparser.automator.R;
 import com.smileparser.automator.database.DatabaseHelper;
 
@@ -52,7 +52,7 @@ public class TriggerService extends Service {
 
     public Notification getNotification() {
 
-        Intent intent = new Intent(this, Splashscreen.class);
+        Intent intent = new Intent(this, ActivitySplashPage.class);
         PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, 0);
 
 
@@ -78,7 +78,7 @@ public class TriggerService extends Service {
         assert manager != null;
         manager.createNotificationChannel(chan);
 
-        Intent intent = new Intent(this, Splashscreen.class);
+        Intent intent = new Intent(this, ActivitySplashPage.class);
         PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, 0);
 
         NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(this, NOTIFICATION_CHANNEL_ID);

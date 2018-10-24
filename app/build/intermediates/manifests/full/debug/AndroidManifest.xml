@@ -20,9 +20,10 @@
         android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:testOnly="true"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.smileparser.automator.Activity.Splashscreen"
+            android:name="com.smileparser.automator.activity.ActivitySplashPage"
             android:screenOrientation="sensorPortrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
             <intent-filter>
@@ -32,14 +33,14 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.smileparser.automator.Activity.MainActivity"
+            android:name="com.smileparser.automator.activity.ActivityMainPage"
             android:screenOrientation="sensorPortrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
-            android:name="com.smileparser.automator.Activity.CreateActivity"
+            android:name="com.smileparser.automator.activity.ActivityCreateMacroPage"
             android:screenOrientation="sensorPortrait" />
         <activity
-            android:name="com.smileparser.automator.Activity.Previous_trigger_Activity"
+            android:name="com.smileparser.automator.activity.Previous_trigger_Activity"
             android:screenOrientation="sensorPortrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
 
@@ -47,8 +48,6 @@
             android:name="com.smileparser.automator.triggeractionmanager.TriggerService"
             android:enabled="true"
             android:exported="true" />
-
-        <activity android:name="com.smileparser.automator.Activity.CreateMacroActivity" />
     </application>
 
 </manifest>

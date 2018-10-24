@@ -1,58 +1,61 @@
 package com.smileparser.automator.activity;
 
-import android.annotation.SuppressLint;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
+import android.support.v4.content.ContextCompat;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.smileparser.automator.R;
 
-public class Previous_trigger_Activity extends AppCompatActivity  {
-
-
+public class Previous_trigger_Activity extends AppCompatActivity {
     LinearLayout lnrToolbarr;
     TextView txtPrevTitle;
     String stYpe;
 
-
-    @SuppressLint("ResourceAsColor")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate( savedInstanceState );
-        setContentView( R.layout.activity_previous_trigger_ );
-        stYpe = getIntent().getStringExtra( "Key" );
-        lnrToolbarr = findViewById( R.id.toolbarr );
-        txtPrevTitle = findViewById( R.id.txtPrevTitle );
-        lnrToolbarr = findViewById( R.id.toolbarr );
-        txtPrevTitle.setText( "Preview" );
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_previous_trigger_);
+        if (getIntent() != null) {
+            if (getIntent().getStringExtra("Key") != null) {
+                stYpe = getIntent().getStringExtra("Key");
+            }
+        }
+        assignViews();
 
+        switch (stYpe) {
+            case "1":
+                lnrToolbarr.setBackgroundColor(ContextCompat.getColor(this, R.color.dark_red));
+                break;
 
-        if (stYpe.endsWith("1")) {
-            lnrToolbarr.setBackgroundColor(R.color.dark_red );
-        } else if (stYpe.endsWith("2")) {
-            lnrToolbarr.setBackgroundColor(R.color.blue );
-        } else if (stYpe.endsWith("3")) {
-            lnrToolbarr.setBackgroundColor( R.color.green );
-        } else {
+            case "2":
+                lnrToolbarr.setBackgroundColor(ContextCompat.getColor(this, R.color.blue));
+                break;
+
+            case "3":
+                lnrToolbarr.setBackgroundColor(ContextCompat.getColor(this, R.color.green));
+                break;
         }
 
-
-
-
-
-        //onbackpressed//
-        findViewById( R.id.arraw ).setOnClickListener( new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onBackPressed();
-
-
-            }
-        } );
-
+        findViewById(R.id.arraw).setOnClickListener(v -> previewBack());
     }
 
+    private void assignViews() {
+        lnrToolbarr = findViewById(R.id.toolbarr);
+        txtPrevTitle = findViewById(R.id.txtPrevTitle);
+        lnrToolbarr = findViewById(R.id.toolbarr);
+        txtPrevTitle.setText("Preview");
+    }
 
+    @Override
+    public void onBackPressed() {
+        previewBack();
+        super.onBackPressed();
+    }
+
+    private void previewBack() {
+        overridePendingTransition(R.anim.enter_from_left, R.anim.exit_to_right);
+        finish();
+    }
 }

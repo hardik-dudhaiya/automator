@@ -9,7 +9,7 @@
     android:fitsSystemWindows="true"
     android:orientation="vertical"
 
-    tools:context=".Activity.MainActivity">
+    tools:context=".activity.ActivityMainPage">
 
     <!--Main Content-->
     <RelativeLayout
