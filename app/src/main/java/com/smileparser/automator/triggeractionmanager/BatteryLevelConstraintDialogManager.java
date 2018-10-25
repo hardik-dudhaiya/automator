@@ -32,6 +32,7 @@ public class BatteryLevelConstraintDialogManager extends DialogManager {
         AlertDialog.Builder builder = new AlertDialog.Builder(context);
         final BatteryLevelConstraintDialogBinding batteryLevelConstraintDialogBinding = DataBindingUtil.
                 inflate(LayoutInflater.from(context), R.layout.battery_level_constraint_dialog, null, false);
+
         batteryLevelConstraintDialogBinding.percentSeek.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {

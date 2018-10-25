@@ -43,6 +43,24 @@ class DataBinderMapperImpl extends android.databinding.DataBinderMapper {
                     }
                         throw new java.lang.IllegalArgumentException("The tag for battery_saver_trigger_dialog is invalid. Received: " + tag);
                 }
+                case com.smileparser.automator.R.layout.layout_location_trigger:
+ {
+                        final Object tag = view.getTag();
+                        if(tag == null) throw new java.lang.RuntimeException("view must have a tag");
+                    if ("layout/layout_location_trigger_0".equals(tag)) {
+                            return new com.smileparser.automator.databinding.LayoutLocationTriggerBinding(bindingComponent, view);
+                    }
+                        throw new java.lang.IllegalArgumentException("The tag for layout_location_trigger is invalid. Received: " + tag);
+                }
+                case com.smileparser.automator.R.layout.layout_dial_phone:
+ {
+                        final Object tag = view.getTag();
+                        if(tag == null) throw new java.lang.RuntimeException("view must have a tag");
+                    if ("layout/layout_dial_phone_0".equals(tag)) {
+                            return new com.smileparser.automator.databinding.LayoutDialPhoneBinding(bindingComponent, view);
+                    }
+                        throw new java.lang.IllegalArgumentException("The tag for layout_dial_phone is invalid. Received: " + tag);
+                }
                 case com.smileparser.automator.R.layout.battery_level_constraint_dialog:
  {
                         final Object tag = view.getTag();
@@ -89,6 +107,18 @@ class DataBinderMapperImpl extends android.databinding.DataBinderMapper {
             case -1030256639: {
                 if(tag.equals("layout/battery_saver_trigger_dialog_0")) {
                     return com.smileparser.automator.R.layout.battery_saver_trigger_dialog;
+                }
+                break;
+            }
+            case -692853777: {
+                if(tag.equals("layout/layout_location_trigger_0")) {
+                    return com.smileparser.automator.R.layout.layout_location_trigger;
+                }
+                break;
+            }
+            case -1872009120: {
+                if(tag.equals("layout/layout_dial_phone_0")) {
+                    return com.smileparser.automator.R.layout.layout_dial_phone;
                 }
                 break;
             }

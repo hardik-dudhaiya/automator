@@ -4,6 +4,10 @@
         "source": "D:\\Git\\Automator\\automator\\app\\src\\main\\res\\layout\\battery_saver_trigger_dialog.xml"
     },
     {
+        "merged": "D:\\Git\\Automator\\automator\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_dial_phone.xml",
+        "source": "D:\\Git\\Automator\\automator\\app\\src\\main\\res\\layout\\layout_dial_phone.xml"
+    },
+    {
         "merged": "D:\\Git\\Automator\\automator\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\power_connection_trigger_dialog.xml",
         "source": "D:\\Git\\Automator\\automator\\app\\src\\main\\res\\layout\\power_connection_trigger_dialog.xml"
     },
@@ -14,6 +18,10 @@
     {
         "merged": "D:\\Git\\Automator\\automator\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\battery_increase_decrease_dialog.xml",
         "source": "D:\\Git\\Automator\\automator\\app\\src\\main\\res\\layout\\battery_increase_decrease_dialog.xml"
+    },
+    {
+        "merged": "D:\\Git\\Automator\\automator\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_location_trigger.xml",
+        "source": "D:\\Git\\Automator\\automator\\app\\src\\main\\res\\layout\\layout_location_trigger.xml"
     },
     {
         "merged": "D:\\Git\\Automator\\automator\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\battery_level_constraint_dialog.xml",

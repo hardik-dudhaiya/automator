@@ -16,16 +16,44 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
+    <!--Parent Fragment Strings start-->
+
+    <!--Triggers start-->
+    <string-array name="trigger_labels">
+        <item>Battery/power</item>
+        <item>Call/SMS</item>
+        <item>Connectivity</item>
+        <item>Date/Time</item>
+        <item>Device Events</item>
+        <item>Location</item>
+        <item>AppsMount/Specific</item>
+    </string-array>
+
+    <string-array name="trigger_images">
+        <item>ic_battery</item>
+        <item>ic_call</item>
+        <item>ic_conectivity</item>
+        <item>ic_date</item>
+        <item>ic_events</item>
+        <item>ic_location</item>
+        <item>ic_battery</item>
+    </string-array>
+    <!--Triggers end-->
+
+    <!--Actions start-->
+    <string-array name="action_labels">
+
+
+    </string-array>
+    <!--Actions end-->
+
+    <!--Parent Fragment Strings end-->
+
+
     <!--createnew_frg-->
     <!-- createnew_fragment_data -->
     <string name="createnew_fragment_data">
-        Battery/power,
-        Call/SMS,
-        Connectivity,
-        Date/Time,
-        Device Events,
-        Location,
-        AppsMount/Specific
+        Battery/power,Call/SMS,Connectivity,Date/Time,Device Events,Location,AppsMount/Specific
     </string>
     <!-- createnew_fragment_img -->
     <string name="createnew_frgment_img">
@@ -42,15 +70,7 @@
     <!-- action frg-->
     <!--action_frgment_data-->
     <string name="action_fragment_data">
-        Applications,
-        Camera/Photo,
-        Connectivity,
-        Date/Time,
-        Device Actions,
-        Device Settings,
-        Location,
-        Media,
-        Messaging,Phone,Screen,Volume
+        Applications,Camera/Photo,Connectivity,Date/Time,Device Actions,Device Settings,Location,Media,Messaging,Phone,Screen,Volume
     </string>
     <!--action_frgment_img-->
     <string name="action_fragment_img">ic_application,ic_camera,ic_connectivity2,ic_date2,ic_device,ic_settng2,ic_location2,ic_media,ic_message,ic_phone,ic_screen,ic_volume2
@@ -60,14 +80,7 @@
     <!-- constraint_frg-->
     <!--constraint_frg_data-->
     <string name="constraint_fragment_data">
-        Battery/Power,
-        Connectivity,
-        Date/Time,
-        Device State,
-        Media,
-        Phone,
-        Screen and Speaker,
-        Sensors
+        Battery/Power,Connectivity,Date/Time,Device State,Media,Phone,Screen and Speaker,Sensors
     </string>
     <!--constraint_frg_img-->
     <string name="constraint_fragment_img">

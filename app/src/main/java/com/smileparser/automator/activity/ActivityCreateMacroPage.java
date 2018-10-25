@@ -1,12 +1,12 @@
 package com.smileparser.automator.activity;
 
+import android.Manifest;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
@@ -14,18 +14,21 @@ import android.widget.Toast;
 import com.smileparser.automator.R;
 import com.smileparser.automator.fragment.FragmentChildPage;
 import com.smileparser.automator.fragment.FragmentMainPage;
-import com.smileparser.automator.fragment.Inner_action_Fragment;
-import com.smileparser.automator.fragment.Inner_constraint_Fragment;
-import com.smileparser.automator.fragment.Inner_createnew_Fragment;
+import com.smileparser.automator.triggeractionmanager.Macro;
+import com.smileparser.automator.utils.PermissionUtil;
 import com.smileparser.automator.utils.SecondaryTextView;
+
+import java.util.ArrayList;
 
 import javax.annotation.Nullable;
 
-public class ActivityCreateMacroPage extends AppCompatActivity {
+public class ActivityCreateMacroPage extends BaseActivity {
 
     @SuppressLint("StaticFieldLeak")
     public static ActivityCreateMacroPage sInstance;
+    public Macro macro = new Macro();
     Bundle bundle = new Bundle();
+    boolean AllGranted = false;
     private LinearLayout _toolbar;
     private ImageView _imgMenu, _imgPreview;
     private SecondaryTextView _txtTitle;
@@ -40,10 +43,15 @@ public class ActivityCreateMacroPage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         sInstance = this;
-        setContentView(R.layout.activity_create_macro);
+        //setContentView(R.layout.activity_create_macro);
         assignViews();
         handleClicks();
         _bottomNavigation.setSelectedItemId(R.id.menu_triggers);
+    }
+
+    @Override
+    protected int getLayoutResourceId() {
+        return R.layout.activity_create_macro;
     }
 
     private void assignViews() {
@@ -137,7 +145,7 @@ public class ActivityCreateMacroPage extends AppCompatActivity {
         if (bundle != null) {
             this.bundle = bundle;
         }
-        openFragment(new FragmentChildPage(),tag);
+        openFragment(new FragmentChildPage(), tag);
 
         /*switch (callType) {
             case "1": {//Triggers
@@ -155,5 +163,31 @@ public class ActivityCreateMacroPage extends AppCompatActivity {
             }
             break;
         }*/
+    }
+
+    public void checkCallingPermission() {
+        new PermissionUtil(this)
+                .withListener(new PermissionUtil.setListener() {
+                    @Override
+                    public void onAllGranted() {
+                        AllGranted = true;
+                    }
+
+                    @Override
+                    public void onAllDenied() {
+                        AllGranted = false;
+                    }
+
+                    @Override
+                    public void onAskAgain(ArrayList<String> rationalePermissions) {
+                        AllGranted = false;
+                    }
+                })
+                .withPermission(Manifest.permission.READ_CALL_LOG,
+                        Manifest.permission.CALL_PHONE,
+                        Manifest.permission.PROCESS_OUTGOING_CALLS,
+                        Manifest.permission.READ_CONTACTS);
+
+
     }
 }

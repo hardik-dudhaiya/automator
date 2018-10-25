@@ -40,12 +40,12 @@
         "source": "C:\\Users\\Lucifer\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.1.aar\\e41d2c798d77f993d14395de466956d8\\res\\drawable-anydpi-v21\\design_ic_visibility.xml"
     },
     {
-        "merged": "D:\\Git\\Automator\\automator\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
-        "source": "C:\\Users\\Lucifer\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\ce272d866aaeff87275f7548ea622dad\\res\\drawable-mdpi-v4\\abc_ic_menu_copy_mtrl_am_alpha.png"
-    },
-    {
         "merged": "D:\\Git\\Automator\\automator\\app\\build\\intermediates\\res\\merged\\debug\\layout_design_navigation_menu.xml.flat",
         "source": "C:\\Users\\Lucifer\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.1.aar\\e41d2c798d77f993d14395de466956d8\\res\\layout\\design_navigation_menu.xml"
+    },
+    {
+        "merged": "D:\\Git\\Automator\\automator\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
+        "source": "C:\\Users\\Lucifer\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\ce272d866aaeff87275f7548ea622dad\\res\\drawable-mdpi-v4\\abc_ic_menu_copy_mtrl_am_alpha.png"
     },
     {
         "merged": "D:\\Git\\Automator\\automator\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_foreground.png.flat",
@@ -458,6 +458,10 @@
     {
         "merged": "D:\\Git\\Automator\\automator\\app\\build\\intermediates\\res\\merged\\debug\\drawable_open_website_http_get.png.flat",
         "source": "D:\\Git\\Automator\\automator\\app\\src\\main\\res\\drawable\\open_website_http_get.png"
+    },
+    {
+        "merged": "D:\\Git\\Automator\\automator\\app\\build\\intermediates\\res\\merged\\debug\\layout_layout_location_trigger.xml.flat",
+        "source": "D:\\Git\\Automator\\automator\\app\\src\\main\\res\\layout\\layout_location_trigger.xml"
     },
     {
         "merged": "D:\\Git\\Automator\\automator\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_ic_star_black_16dp.png.flat",
@@ -1402,6 +1406,10 @@
     {
         "merged": "D:\\Git\\Automator\\automator\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_tint_btn_checkable.xml.flat",
         "source": "C:\\Users\\Lucifer\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\ce272d866aaeff87275f7548ea622dad\\res\\color\\abc_tint_btn_checkable.xml"
+    },
+    {
+        "merged": "D:\\Git\\Automator\\automator\\app\\build\\intermediates\\res\\merged\\debug\\layout_layout_dial_phone.xml.flat",
+        "source": "D:\\Git\\Automator\\automator\\app\\src\\main\\res\\layout\\layout_dial_phone.xml"
     },
     {
         "merged": "D:\\Git\\Automator\\automator\\app\\build\\intermediates\\res\\merged\\debug\\anim-v21_design_bottom_sheet_slide_out.xml.flat",

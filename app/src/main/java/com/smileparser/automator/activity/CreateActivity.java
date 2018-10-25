@@ -18,7 +18,7 @@ import com.smileparser.automator.triggeractionmanager.Macro;
 import com.smileparser.automator.triggeractionmanager.TriggerService;
 import com.smileparser.automator.utils.Constants;
 import com.smileparser.automator.utils.SharedPrefs;
-import com.smileparser.automator.utils.Util;
+import com.smileparser.automator.utils.Utility;
 
 public class CreateActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -164,7 +164,7 @@ public class CreateActivity extends AppCompatActivity implements View.OnClickLis
 
         refreshServiceIfAlreadyRunning();
 
-        Util.showToast(this, "Macro added.");
+        Utility.showToast(this, "Macro added.");
         finish();
     }
 

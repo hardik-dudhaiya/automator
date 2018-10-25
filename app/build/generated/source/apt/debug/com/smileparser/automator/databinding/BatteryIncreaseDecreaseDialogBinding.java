@@ -18,6 +18,7 @@ public class BatteryIncreaseDecreaseDialogBinding extends android.databinding.Vi
         sViewsWithIds.put(R.id.decreases_radio_button, 2);
         sViewsWithIds.put(R.id.progress_text_view, 3);
         sViewsWithIds.put(R.id.percent_seek, 4);
+        sViewsWithIds.put(R.id.seek_bar, 5);
     }
     // views
     @NonNull
@@ -30,6 +31,8 @@ public class BatteryIncreaseDecreaseDialogBinding extends android.databinding.Vi
     public final android.support.v7.widget.AppCompatSeekBar percentSeek;
     @NonNull
     public final android.widget.TextView progressTextView;
+    @NonNull
+    public final android.widget.SeekBar seekBar;
     // variables
     // values
     // listeners
@@ -37,13 +40,14 @@ public class BatteryIncreaseDecreaseDialogBinding extends android.databinding.Vi
 
     public BatteryIncreaseDecreaseDialogBinding(@NonNull android.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
         super(bindingComponent, root, 0);
-        final Object[] bindings = mapBindings(bindingComponent, root, 5, sIncludes, sViewsWithIds);
+        final Object[] bindings = mapBindings(bindingComponent, root, 6, sIncludes, sViewsWithIds);
         this.decreasesRadioButton = (android.widget.RadioButton) bindings[2];
         this.increasesRadioButton = (android.widget.RadioButton) bindings[1];
         this.mboundView0 = (android.widget.LinearLayout) bindings[0];
         this.mboundView0.setTag(null);
         this.percentSeek = (android.support.v7.widget.AppCompatSeekBar) bindings[4];
         this.progressTextView = (android.widget.TextView) bindings[3];
+        this.seekBar = (android.widget.SeekBar) bindings[5];
         setRootTag(root);
         // listeners
         invalidateAll();
