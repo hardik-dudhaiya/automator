@@ -13,6 +13,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.support.annotation.NonNull;
+import android.util.Log;
 
 import com.smileparser.automator.triggeractionmanager.Action;
 import com.smileparser.automator.triggeractionmanager.ActionDao;
@@ -37,8 +38,7 @@ import java.util.concurrent.Executors;
  * Created by mayur on 30/9/18.
  */
 
-@Database(entities = {Category.class, Trigger.class, Action.class, Macro.class, TriggerDetails.class,
-        ActionDetails.class, Constraint.class, ConstraintDetails.class}, version = 1)
+@Database(entities = {Category.class, Trigger.class, Action.class, Macro.class, TriggerDetails.class,ActionDetails.class, Constraint.class, ConstraintDetails.class}, version = 1)
 public abstract class DatabaseHelper extends RoomDatabase {
 
     private static DatabaseHelper INSTANCE;
@@ -62,11 +62,12 @@ public abstract class DatabaseHelper extends RoomDatabase {
                     @Override
                     public void onCreate(@NonNull SupportSQLiteDatabase db) {
                         super.onCreate(db);
-
                         Executors.newSingleThreadScheduledExecutor().execute(new Runnable() {
                             @Override
                             public void run() {
+                                Log.e("Android->", "run: ");
                                 DatabaseHelper dbhelper = getAppDatabase(context);
+
                                 Category category = new Category("Battery/Power");
                                 long categoryId = dbhelper.getCategoryDao().insert(category);
 
@@ -93,6 +94,7 @@ public abstract class DatabaseHelper extends RoomDatabase {
 
                                 constraint = new Constraint(categoryId, "Power connected/disconnected");
                                 dbhelper.getConstraintDao().insert(constraint);
+
                             }
                         });
                     }
@@ -151,7 +153,7 @@ public abstract class DatabaseHelper extends RoomDatabase {
 //    private static final int database_version = 1;
 //    private SQLiteDatabase sqliteDatabase;
 //
-//    public DatabaseHelper(Context context) {
+//    public DatabaseHelperUtil(Context context) {
 //        super(context, database_name, null, database_version);
 //    }
 //

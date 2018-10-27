@@ -76,4 +76,12 @@ public class Utility {
         }
         return groupContacts;
     }
+
+    public static Boolean IsNotNull(Object object) {
+        if (object != null && !object.equals("null") && !object.equals("")) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }

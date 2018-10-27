@@ -56,45 +56,45 @@ public class Inner_createnew_Fragment extends Fragment implements OnTriggerMenuC
             sImg = args.getString("Key_img");
 
 
-            title_img = getResources().getString(R.string.trigger_icon_img).split(",");
+            title_img = getResources().getString(R.string.trigger_list_images).split(",");
 
             Log.e( "Img", title_img[1] );
             if (sName.endsWith( "Battery/power" )) {
                 id = getResources().getIdentifier( title_img[0], "drawable", getActivity().getPackageName() );
-                actionimg_name = getResources().getString( R.string.beterry_data ).split( "," );
-                actionimg_img = getResources().getString( R.string.bettry_img ).split( "," );
+                actionimg_name = getResources().getString( R.string.tr_battery_labels).split( "," );
+                actionimg_img = getResources().getString( R.string.tr_battery_images).split( "," );
             }
             if (sName.endsWith("Call/SMS")) {
                 id = getResources().getIdentifier(title_img[1], "drawable", getActivity().getPackageName());
-                actionimg_name = getResources().getString(R.string.call_sma_data).split(",");
-                actionimg_img = getResources().getString(R.string.call_sms_img).split(",");
+                actionimg_name = getResources().getString(R.string.tr_call_sms_labels).split(",");
+                actionimg_img = getResources().getString(R.string.tr_call_sms_images).split(",");
             }
 
             if (sName.endsWith( "Connectivity" )) {
                 id = getResources().getIdentifier( title_img[2], "drawable", getActivity().getPackageName() );
-                actionimg_name = getResources().getString( R.string.connectivity_data ).split( "," );
-                actionimg_img = getResources().getString( R.string.connectivity_img ).split( "," );
+                actionimg_name = getResources().getString( R.string.tr_connectivity_labels).split( "," );
+                actionimg_img = getResources().getString( R.string.tr_connectivity_images).split( "," );
             }
 
             if (sName.endsWith("Date/Time")) {
                 id = getResources().getIdentifier(title_img[2], "drawable", getActivity().getPackageName());
-                actionimg_name = getResources().getString(R.string.date_time_data).split(",");
-                actionimg_img = getResources().getString(R.string.date_time_img).split(",");
+                actionimg_name = getResources().getString(R.string.tr_date_time_labels).split(",");
+                actionimg_img = getResources().getString(R.string.tr_date_time_images).split(",");
             }
             if  (sName.endsWith( "Device Events" )) {
                 id = getResources().getIdentifier( title_img[4], "drawable", getActivity().getPackageName() );
-                actionimg_name = getResources().getString( R.string.device_event_data ).split( "," );
-                actionimg_img = getResources().getString( R.string.device_event_img ).split( "," );
+                actionimg_name = getResources().getString( R.string.tr_device_event_labels).split( "," );
+                actionimg_img = getResources().getString( R.string.tr_device_event_image).split( "," );
             }
             if (sName.endsWith("Location")) {
                 id = getResources().getIdentifier(title_img[5], "drawable", getActivity().getPackageName());
-                actionimg_name = getResources().getString(R.string.location_data).split(",");
-                actionimg_img = getResources().getString(R.string.location_img).split(",");
+                actionimg_name = getResources().getString(R.string.tr_location_labels).split(",");
+                actionimg_img = getResources().getString(R.string.tr_location_image).split(",");
             }
             if(sName.endsWith( "AppsMount/Specific" )) {
                 id = getResources().getIdentifier( title_img[6], "drawable", getActivity().getPackageName() );
-                actionimg_name = getResources().getString( R.string.location_data ).split( "," );
-                actionimg_img = getResources().getString( R.string.date_time_data ).split( "," );
+                actionimg_name = getResources().getString( R.string.tr_location_labels).split( "," );
+                actionimg_img = getResources().getString( R.string.tr_date_time_labels).split( "," );
 
 
             }

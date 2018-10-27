@@ -5,6 +5,7 @@ import android.app.Application;
 import android.content.Context;
 
 import com.facebook.stetho.Stetho;
+import com.smileparser.automator.db_helper.MyDatabaseHelper;
 
 public class App extends Application {
 
@@ -13,6 +14,10 @@ public class App extends Application {
 
     @SuppressLint("StaticFieldLeak")
     private static App mInstance;
+
+    public static synchronized MyDatabaseHelper getDataBaseHelper() {
+        return new MyDatabaseHelper(mContext);
+    }
 
     public static synchronized App getInstance() {
         return mInstance;

@@ -90,18 +90,18 @@ public class FragmentMainPage extends Fragment {
 
                     switch (page) {
                         case "1": { //Triggers
-                            image_array = getResources().getString(R.string.createnew_frgment_img).split(",");
-                            strings_array = getResources().getString(R.string.createnew_fragment_data).split(",");
+                            image_array = getResources().getString(R.string.trigger_images).split(",");
+                            strings_array = getResources().getString(R.string.trigger_labels).split(",");
                         }
                         break;
                         case "2": { //Actions
-                            image_array = getResources().getString(R.string.action_fragment_img).split(",");
-                            strings_array = getResources().getString(R.string.action_fragment_data).split(",");
+                            image_array = getResources().getString(R.string.action_images).split(",");
+                            strings_array = getResources().getString(R.string.actions_labels).split(",");
                         }
                         break;
                         case "3": { //Constraints
-                            image_array = getResources().getString(R.string.constraint_fragment_img).split(",");
-                            strings_array = getResources().getString(R.string.constraint_fragment_data).split(",");
+                            image_array = getResources().getString(R.string.constraint_images).split(",");
+                            strings_array = getResources().getString(R.string.constraint_labels).split(",");
                         }
                         break;
                     }

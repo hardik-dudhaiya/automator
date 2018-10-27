@@ -1000,15 +1000,15 @@ public final class R {
         public static final int abc_shareactionprovider_share_with_application = 0x7f0e001b;
         public static final int abc_toolbar_collapse_description = 0x7f0e001c;
         public static final int appbar_scrolling_view_behavior = 0x7f0e003a;
-        public static final int bottom_sheet_behavior = 0x7f0e003d;
-        public static final int character_counter_pattern = 0x7f0e0040;
-        public static final int password_toggle_content_description = 0x7f0e0067;
-        public static final int path_password_eye = 0x7f0e0068;
-        public static final int path_password_eye_mask_strike_through = 0x7f0e0069;
-        public static final int path_password_eye_mask_visible = 0x7f0e006a;
-        public static final int path_password_strike_through = 0x7f0e006b;
-        public static final int search_menu_title = 0x7f0e006c;
-        public static final int status_bar_notification_info_overflow = 0x7f0e006d;
+        public static final int bottom_sheet_behavior = 0x7f0e003b;
+        public static final int character_counter_pattern = 0x7f0e003c;
+        public static final int password_toggle_content_description = 0x7f0e0059;
+        public static final int path_password_eye = 0x7f0e005a;
+        public static final int path_password_eye_mask_strike_through = 0x7f0e005b;
+        public static final int path_password_eye_mask_visible = 0x7f0e005c;
+        public static final int path_password_strike_through = 0x7f0e005d;
+        public static final int search_menu_title = 0x7f0e005e;
+        public static final int status_bar_notification_info_overflow = 0x7f0e005f;
     }
     public static final class style {
         public static final int AlertDialog_AppCompat = 0x7f0f0000;

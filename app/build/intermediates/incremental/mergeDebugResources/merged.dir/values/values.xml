@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="http://schemas.android.com/tools" xmlns:ns2="urn:oasis:names:tc:xliff:document:1.2">
-    <string-array name="action_labels">
-
-
-    </string-array>
     <string-array name="audio_stream">
         <item>Ringer</item>
         <item>Notification</item>
@@ -67,24 +63,6 @@
         <item>October</item>
         <item>November</item>
         <item>December</item>
-    </string-array>
-    <string-array name="trigger_images">
-        <item>ic_battery</item>
-        <item>ic_call</item>
-        <item>ic_conectivity</item>
-        <item>ic_date</item>
-        <item>ic_events</item>
-        <item>ic_location</item>
-        <item>ic_battery</item>
-    </string-array>
-    <string-array name="trigger_labels">
-        <item>Battery/power</item>
-        <item>Call/SMS</item>
-        <item>Connectivity</item>
-        <item>Date/Time</item>
-        <item>Device Events</item>
-        <item>Location</item>
-        <item>AppsMount/Specific</item>
     </string-array>
     <attr format="boolean" name="barrierAllowsGoneWidgets"/>
     <attr format="enum" name="barrierDirection">
@@ -209,7 +187,7 @@
     <attr format="dimension" name="layout_goneMarginTop"/>
     <attr name="layout_optimizationLevel">
         <flag name="none" value="0"/>
-        <flag name="standard" value="7"/> <!-- direct, barriers, chains -->
+        <flag name="standard" value="7"/> 
         <flag name="direct" value="1"/>
         <flag name="barrier" value="2"/>
         <flag name="chains" value="4"/>
@@ -1676,400 +1654,63 @@
     <string name="abc_shareactionprovider_share_with">Share with</string>
     <string name="abc_shareactionprovider_share_with_application">Share with <ns2:g example="Mail" id="application_name">%s</ns2:g></string>
     <string name="abc_toolbar_collapse_description">Collapse</string>
-    <string name="action_application_data">
-        App Enable/Disable,
-        clear App Data,
-        Kill Application,
-        Kill Application Process,
-        Launch Application,
-        Launch Shortcut,
-        Locate/Tasker plugin,
-        Open Website/HTTP GET,
-        Shell Script
-
-    </string>
-    <string name="action_application_img">
-        app_enable_disable,
-        clear_app_data,
-        kill_application,
-        kill_application_process,
-        launch_application,
-        launch_shortcut,
-        locale_tasker_plugin,
-        open_website_http_get,
-        shell_script
-    </string>
-    <string name="action_camera_photo_data">
-        Share Last Photo,
-        Take Picture,
-        Take Screenshoot
-   </string>
-    <string name="action_camera_photo_img">
-        share_last_photo,
-        take_picture,
-        take_screenshot
-    </string>
-    <string name="action_connectivity_data">
-        Airplane mode on/off,
-        Auto sync on/off,
-        Bluetooth,
-        Mobile data on/off
-    </string>
-    <string name="action_connectivity_img">
-        airplane_mode_onoff,
-        auto_sync_onoff,
-        bluetooth,
-        mobile_data_onoff
-    </string>
-    <string name="action_date_time_data">
-        Alarm Clock,
-        Say Current Time,
-        Stopwatch
-    </string>
-    <string name="action_datetime_img">
-        alarm_lock,
-        say_current_time,
-        stopwatch
-    </string>
-    <string name="action_device_action_data">
-        Launch home screen,
-        Press back button,
-        Reboot/Power off,
-        Speak text,
-        Vibrate
-    </string>
-    <string name="action_device_action_img">
-        launch_home_screen,
-        press_back_button,
-        reboot_power_off,
-        speak_text,
-        vibrate
-    </string>
-    <string name="action_device_setting_data">
-        Auto rotate on/off,
-        Battery saver
-  </string>
-    <string name="action_device_setting_img">
-        auto_rotate_onoff,
-        battery_saver
-    </string>
-    <string name="action_fragment_data">
-        Applications,Camera/Photo,Connectivity,Date/Time,Device Actions,Device Settings,Location,Media,Messaging,Phone,Screen,Volume
-    </string>
-    <string name="action_fragment_img">ic_application,ic_camera,ic_connectivity2,ic_date2,ic_device,ic_settng2,ic_location2,ic_media,ic_message,ic_phone,ic_screen,ic_volume2
-    </string>
+    <string name="action_application_data">App Enable/Disable,clear App Data,Kill Application,Kill Application Process,Launch Application,Launch Shortcut,Locate/Tasker plugin,Open Website/HTTP GET,Shell Script</string>
+    <string name="action_application_img">app_enable_disable,clear_app_data,kill_application,kill_application_process,launch_application,launch_shortcut,locale_tasker_plugin,open_website_http_get,shell_script</string>
+    <string name="action_camera_photo_data">Share Last Photo,Take Picture,Take Screenshoot</string>
+    <string name="action_camera_photo_img">share_last_photo,take_picture,take_screenshot</string>
+    <string name="action_connectivity_data">Airplane mode on/off,Auto sync on/off,Bluetooth,Mobile data on/off</string>
+    <string name="action_connectivity_img">airplane_mode_onoff,auto_sync_onoff,bluetooth,mobile_data_onoff</string>
+    <string name="action_date_time_data">Alarm Clock,Say Current Time,Stopwatch</string>
+    <string name="action_datetime_img">alarm_lock,say_current_time,stopwatch</string>
+    <string name="action_device_action_data">Launch home screen,Press back button,Reboot/Power off,Speak text,Vibrate</string>
+    <string name="action_device_action_img">launch_home_screen,press_back_button,reboot_power_off,speak_text,vibrate</string>
+    <string name="action_device_setting_data">Auto rotate on/off,Battery saver</string>
+    <string name="action_device_setting_img">auto_rotate_onoff,battery_saver</string>
     <string name="action_icon_img">
         application_icon,camera_icon,connectivity_iconn,date_time_icon,device_actions,device_settings_icon,location_icon,media_iconn,messaging_iconn,phone_iconn,screen_iconn,volume_iconn
     </string>
-    <string name="action_location_data">
-        Force Location Update,
-        GPS Enable/Disable,
-        Location Mode,
-        Set Location Upadte Rate,
-        Share Location
-    </string>
-    <string name="action_location_img">
-        force_locationupdate,
-        gps_enable_disable,
-        location_mode,
-        set_location_update_rate,
-        share_location
-    </string>
-    <string name="action_media_data">
-        Control Media,
-        Play/Stop Sound,
-        Record Microphone
-    </string>
-    <string name="action_media_img">
-        control_media,
-        play_stop_sound,
-        record_microphone
-    </string>
-    <string name="action_messaging_data">
-        Send Email,
-        Send SMS,
-        Tweet,
-        UDP Command
-    </string>
-    <string name="action_messanging_img">
-        send_email,
-        send_sms,
-        tweet,
-       upd_command
-
-    </string>
-    <string name="action_phone_data">
-        Answer Call,
-        Call Rejet,
-        Clear Call Log,
-        Make Call,
-        Open Call Log,
-        Ringtone Configure
-      </string>
-    <string name="action_phone_img">
-        answer_call,
-        call_reject,
-       clear_call_log,
-        make_call,
-        open_call_log,
-        ringer_volume
-    </string>
-    <string name="action_screen_data">
-        Brightness,
-        Dim Screen,
-        Force Screen Rotation,
-        Keep Device Awake,
-        Screen On/Off,
-        Set Screen Timeout
-      </string>
-    <string name="action_screen_img">
-        brightness,
-        dim_screen,
-        force_screen_rotation,
-        keep_device_awake,
-        screen_on_off,
-        set_screen_timeout
-      </string>
+    <string name="action_images">ic_application,ic_camera,ic_connectivity2,ic_date2,ic_device,ic_settng2,ic_location2,ic_media,ic_message,ic_phone,ic_screen,ic_volume2</string>
+    <string name="action_location_data">Force Location Update,GPS Enable/Disable,Location Mode,Set Location Upadte Rate,Share Location</string>
+    <string name="action_location_img">force_locationupdate,gps_enable_disable,location_mode,set_location_update_rate,share_location</string>
+    <string name="action_media_data">Control Media,Play/Stop Sound,Record Microphone</string>
+    <string name="action_media_img">control_media,play_stop_sound,record_microphone</string>
+    <string name="action_messaging_data">Send Email,Send SMS,Tweet,UDP Command</string>
+    <string name="action_messanging_img">send_email,send_sms,tweet,upd_command</string>
+    <string name="action_phone_data">Answer Call,Call Rejet,Clear Call Log,Make Call,Open Call Log,Ringtone Configure</string>
+    <string name="action_phone_img">answer_call,call_reject,clear_call_log,make_call,open_call_log,ringer_volume</string>
+    <string name="action_screen_data">Brightness,Dim Screen,Force Screen Rotation,Keep Device Awake,Screen On/Off,Set Screen Timeout</string>
+    <string name="action_screen_img">brightness,dim_screen,force_screen_rotation,keep_device_awake,screen_on_off,set_screen_timeout</string>
     <string name="action_settings">Settings</string>
-    <string name="action_volume_data">
-        priority Mode/Do Not Disturb,
-        Speakerphone On/Off,
-        Vibrate Enable/Disable,
-        Volume Change,
-        Volume Up/Down
-      </string>
-    <string name="action_voume_img">
-        priority_modedo_not_disturb,
-        speakerphone_onoff,
-        vibrate_enable_disable,
-        volume_change,
-        volume_updown
-      </string>
+    <string name="action_volume_data">priority Mode/Do Not Disturb,Speakerphone On/Off,Vibrate Enable/Disable,Volume Change,Volume Up/Down</string>
+    <string name="action_voume_img">priority_modedo_not_disturb,speakerphone_onoff,vibrate_enable_disable,volume_change,volume_updown</string>
+    <string name="actions_labels">Applications,Camera/Photo,Connectivity,Date/Time,Device Actions,Device Settings,Location,Media,Messaging,Phone,Screen,Volume</string>
     <string name="app_name">Automater</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
-    <string name="beterry_data">
-        Battery level,
-        Battery Saver State,
-        wifi state change,
-        Power Connected/Disconnected
-    </string>
-    <string name="bettry_img">
-     battery_level,
-     battery_saver_state,
-     wifi_state_changee,
-     power_connected_disconnected
-
-</string>
     <string name="bottom_sheet_behavior" translatable="false">android.support.design.widget.BottomSheetBehavior</string>
-    <string name="call_sma_data">
-        Call Active,
-        Call Ended,
-        Call Incoming,
-        Call Missed,
-        Call Outgoing,
-        Dial Phone Number,
-        SMS  Received,
-        SMS Sent
-    </string>
-    <string name="call_sms_img">
-        call_active,
-        call_ended,
-        call_incoming,
-        call_missed,
-        call_outgoing,
-        dial_phone_number,
-        sms_received,
-        sms_sent
-    </string>
     <string name="character_counter_pattern" translatable="false">%1$d / %2$d</string>
-    <string name="connectivity_data">
-        Bluetooth event,
-        Data connectivity change,
-        Headphones Insert/Remove,
-        wifi state change
-    </string>
-    <string name="connectivity_img">
-        bluetooth_event,
-        dataconnectivity_change,
-        headphones_insert_remove,
-        wifi_state_changee,
-    </string>
-    <string name="constraint_bettery">
-        Battery level,
-        Battery Saver State,
-        Power Connected
-    </string>
-    <string name="constraint_bettrey_img">
-        battery_level,
-        battery_saver_state,
-        power_connected
-    </string>
-    <string name="constraint_connectivity_data">
-        Bluetooth State,
-        GPS state,
-        Location mode,
-        Wifi state,
-        Mobile data on/off
-    </string>
-    <string name="constraint_connectivity_img">
-        bluetooth_state,
-        gps_state,
-        location_mode,
-        wifi_state,
-        mobile_data_onoff
-    </string>
-    <string name="constraint_date_time_data">
-       Calender Entry,
-        Day of the Month,
-        Day of the Week,
-        Month of the Year,
-        Stopwatch,
-        Device State
-    </string>
-    <string name="constraint_date_time_img">
-       calender_entry,
-        day_of_the_month,
-        day_of_the_week,
-        month_of_the_year,
-        stopwatch,
-        device_state
-    </string>
-    <string name="constraint_device_state_data">
-        Airplane mode,
-        Application running,
-        Auto rotate,
-        Auto sync,
-        Deviced locked/unlocked,
-        Auto sync,
-        Time since boot
-    </string>
-    <string name="constraint_device_state_img">
-        airplane_mode,
-        application_running,
-        auto_rotate,
-        auto_sync,
-        device_locked_unlocked,
-        auto_sync,
-        light_sensor
-    </string>
-    <string name="constraint_fragment_data">
-        Battery/Power,Connectivity,Date/Time,Device State,Media,Phone,Screen and Speaker,Sensors
-    </string>
-    <string name="constraint_fragment_img">
-        ic_battery,
-        ic_connectivity2,
-        ic_date,
-        device_state,
-        ic_media,
-        ic_phone,
-        ic_speaker,
-        ic_sensor
-    </string>
-    <string name="constraint_icon_img">
-battery_icon,connectivity_icon,date_icon,state_icon,media_icon,phone_icon,speaker_icon,sensor_icon
-
-    </string>
-    <string name="constraint_media_data">
-        Headphone Connection,
-        Music Active,
-    </string>
-    <string name="constraint_media_img">
-        headphone_connection,
-        music_active
-
-        </string>
-    <string name="constraint_phone_data">
-        Call State,
-        Phone Ringing
-    </string>
-    <string name="constraint_phone_img">
-        call_state,
-        phone_ringing
-    </string>
-    <string name="constraint_screen_sensor_data">
-        Brightness,
-        Ringing Volume,
-        Screen on/off,
-        Speakerphone on/off,
-        Volume level
-        </string>
-    <string name="constraint_screen_sensor_img">
-        brightness,
-        ringer_volume,
-        screen_onoff,
-        speakerphone_onoff,
-        volume_level
-    </string>
-    <string name="constraint_sensors_data">
-       Device Facing,
-        Device Orientation,
-        Light Sensor,
-        Proximity Sensor,
-        </string>
-    <string name="constraint_sensors_img">
-        device_facing,
-        device_orientation,
-        light_sensor,
-        proximity_sensor
-  </string>
-    <string name="createnew_fragment_data">
-        Battery/power,Call/SMS,Connectivity,Date/Time,Device Events,Location,AppsMount/Specific
-    </string>
-    <string name="createnew_frgment_img">
-        ic_battery,
-        ic_call,
-        ic_conectivity,
-        ic_date,
-        ic_events,
-        ic_location,
-        ic_battery
-    </string>
-    <string name="date_time_data">
-        Calender Event,
-        Day of Week/Month,
-        Day/Time Trigger,
-        Regular Interval,
-        Stopwatch
-    </string>
-    <string name="date_time_img">
-        calendar_event,
-        day_of_week_mmonth,
-        day_time_trigger,
-        regular_interval,
-        stopwatch
-    </string>
-    <string name="device_event_data">
-        Auto rotate changed,
-        Auto sync changed,
-        Device boot,
-        GPS Enabled/Disabled,
-        Failed login attempt,
-        Music/Sound playing,
-        Notification,
-        Screen Unlocked,
-        Screen on/off
-    </string>
-    <string name="device_event_img">
-        auto_rotate_changed,
-        auto_sync_changed,
-        device_boot,
-        gps_enabled_disabled,
-        failed_login_attempt,
-        music_sound_playing,
-        notification,
-        screen_unlocked,
-        screen_on_off,
-    </string>
+    <string name="constraint_bettery">Battery level,Battery Saver State,Power Connected</string>
+    <string name="constraint_bettrey_img">battery_level,battery_saver_state,power_connected</string>
+    <string name="constraint_connectivity_data">Bluetooth State,GPS state,Location mode,Wifi state,Mobile data on/off</string>
+    <string name="constraint_connectivity_img">bluetooth_state,gps_state,location_mode,wifi_state,mobile_data_onoff</string>
+    <string name="constraint_date_time_data">Calender Entry,Day of the Month,Day of the Week,Month of the Year,Stopwatch,Device State</string>
+    <string name="constraint_date_time_img">calender_entry,day_of_the_month,day_of_the_week,month_of_the_year,stopwatch,device_state</string>
+    <string name="constraint_device_state_data">Airplane mode,Application running,Auto rotate,Auto sync,Deviced locked/unlocked,Auto sync,Time since boot</string>
+    <string name="constraint_device_state_img">airplane_mode,application_running,auto_rotate,auto_sync,device_locked_unlocked,auto_sync,light_sensor</string>
+    <string name="constraint_icon_img">battery_icon,connectivity_icon,date_icon,state_icon,media_icon,phone_icon,speaker_icon,sensor_icon</string>
+    <string name="constraint_images">ic_battery,ic_connectivity2,ic_date,device_state,ic_media,ic_phone,ic_speaker,ic_sensor</string>
+    <string name="constraint_labels">Battery/Power,Connectivity,Date/Time,Device State,Media,Phone,Screen and Speaker,Sensors</string>
+    <string name="constraint_media_data">Headphone Connection,Music Active,</string>
+    <string name="constraint_media_img">headphone_connection,music_active</string>
+    <string name="constraint_phone_data">Call State,Phone Ringing</string>
+    <string name="constraint_phone_img">call_state,phone_ringing</string>
+    <string name="constraint_screen_sensor_data">Brightness,Ringing Volume,Screen on/off,Speakerphone on/off,Volume level</string>
+    <string name="constraint_screen_sensor_img">brightness,ringer_volume,screen_onoff,speakerphone_onoff,volume_level</string>
+    <string name="constraint_sensors_data">Device Facing,Device Orientation,Light Sensor,Proximity Sensor,</string>
+    <string name="constraint_sensors_img">device_facing,device_orientation,light_sensor,proximity_sensor</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="lbl_action">ACTIONS</string>
     <string name="lbl_constrains">CONSTRAINTS</string>
     <string name="lbl_trigger">TRIGGERS</string>
-    <string name="location_data">
-        Location triggers
-    </string>
-    <string name="location_img">
-          location_trigger
-    </string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_title">Android Studio</string>
@@ -2089,8 +1730,21 @@ battery_icon,connectivity_icon,date_icon,state_icon,media_icon,phone_icon,speake
     <string name="text_two">Do</string>
     <string name="title_activity_create_macro">CreateMacroActivity</string>
     <string name="title_activity_main">MainActivity</string>
-    <string name="trigger_icon_img"> bt_poewr,call_sms,connectivity,date_time,device_events,location,location
-    </string>
+    <string name="tr_battery_images">battery_level,battery_saver_state,wifi_state_changee,power_connected_disconnected</string>
+    <string name="tr_battery_labels">Battery level,Battery Saver State,wifi state change,Power Connected/Disconnected</string>
+    <string name="tr_call_sms_images">call_active,call_ended,call_incoming,call_missed,call_outgoing,dial_phone_number,sms_received,sms_sent</string>
+    <string name="tr_call_sms_labels">Call Active,Call Ended,Call Incoming,Call Missed,Call Outgoing,Dial Phone Number,SMS  Received,SMS Sent</string>
+    <string name="tr_connectivity_images">bluetooth_event,dataconnectivity_change,headphones_insert_remove,wifi_state_changee,</string>
+    <string name="tr_connectivity_labels">Bluetooth event,Data connectivity change,Headphones Insert/Remove,wifi state change</string>
+    <string name="tr_date_time_images">calendar_event,day_of_week_mmonth,day_time_trigger,regular_interval,stopwatch</string>
+    <string name="tr_date_time_labels">Calender Event,Day of Week/Month,Day/Time Trigger,Regular Interval,Stopwatch</string>
+    <string name="tr_device_event_image">auto_rotate_changed,auto_sync_changed,device_boot,gps_enabled_disabled,failed_login_attempt,music_sound_playing,notification,screen_unlocked,screen_on_off,</string>
+    <string name="tr_device_event_labels">Auto rotate changed,Auto sync changed,Device boot,GPS Enabled/Disabled,Failed login attempt,Music/Sound playing,Notification,Screen Unlocked,Screen on/off</string>
+    <string name="tr_location_image">location_trigger</string>
+    <string name="tr_location_labels">Location triggers</string>
+    <string name="trigger_images">ic_battery,ic_call,ic_conectivity,ic_date,ic_events,ic_location,ic_battery</string>
+    <string name="trigger_labels">Battery/power,Call/SMS,Connectivity,Date/Time,Device Events,Location,AppsMount/Specific</string>
+    <string name="trigger_list_images"> bt_poewr,call_sms,connectivity,date_time,device_events,location,location</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>
     <style name="Animation.AppCompat.Dialog" parent="Base.Animation.AppCompat.Dialog"/>
@@ -2101,7 +1755,7 @@ battery_icon,connectivity_icon,date_icon,state_icon,media_icon,phone_icon,speake
         <item name="android:windowExitAnimation">@anim/design_bottom_sheet_slide_out</item>
     </style>
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <!-- Customize your theme here. -->
+        
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
@@ -2351,7 +2005,7 @@ battery_icon,connectivity_icon,date_icon,state_icon,media_icon,phone_icon,speake
         <item name="actionBarWidgetTheme">@null</item>
         <item name="actionBarTheme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
 
-        <!-- Panel attributes -->
+        
         <item name="listChoiceBackgroundIndicator">@drawable/abc_list_selector_holo_dark</item>
 
         <item name="colorPrimaryDark">@color/primary_dark_material_dark</item>
@@ -2402,7 +2056,7 @@ battery_icon,connectivity_icon,date_icon,state_icon,media_icon,phone_icon,speake
         <item name="colorButtonNormal">@color/button_material_dark</item>
         <item name="colorSwitchThumbNormal">@color/switch_thumb_material_dark</item>
 
-        <!-- Used by MediaRouter -->
+        
         <item name="isLightTheme">false</item>
     </style>
     <style name="Base.ThemeOverlay.AppCompat.Dark.ActionBar">
@@ -2439,7 +2093,7 @@ battery_icon,connectivity_icon,date_icon,state_icon,media_icon,phone_icon,speake
         <item name="colorButtonNormal">@color/button_material_light</item>
         <item name="colorSwitchThumbNormal">@color/switch_thumb_material_light</item>
 
-        <!-- Used by MediaRouter -->
+        
         <item name="isLightTheme">true</item>
     </style>
     <style name="Base.V14.Widget.Design.AppBarLayout" parent="android:Widget">
@@ -2455,7 +2109,7 @@ battery_icon,connectivity_icon,date_icon,state_icon,media_icon,phone_icon,speake
 
         <item name="colorBackgroundFloating">@color/background_floating_material_dark</item>
 
-        <!-- Used by MediaRouter -->
+        
         <item name="isLightTheme">false</item>
 
         <item name="selectableItemBackground">@drawable/abc_item_background_holo_dark</item>
@@ -2466,7 +2120,7 @@ battery_icon,connectivity_icon,date_icon,state_icon,media_icon,phone_icon,speake
         <item name="dividerVertical">@drawable/abc_list_divider_mtrl_alpha</item>
         <item name="dividerHorizontal">@drawable/abc_list_divider_mtrl_alpha</item>
 
-        <!-- Action Bar Styles -->
+        
         <item name="actionBarTabStyle">@style/Widget.AppCompat.ActionBar.TabView</item>
         <item name="actionBarTabBarStyle">@style/Widget.AppCompat.ActionBar.TabBar</item>
         <item name="actionBarTabTextStyle">@style/Widget.AppCompat.ActionBar.TabText</item>
@@ -2483,10 +2137,10 @@ battery_icon,connectivity_icon,date_icon,state_icon,media_icon,phone_icon,speake
         <item name="actionMenuTextAppearance">@style/TextAppearance.AppCompat.Widget.ActionBar.Menu</item>
         <item name="actionMenuTextColor">?android:attr/textColorPrimaryDisableOnly</item>
 
-        <!-- Dropdown Spinner Attributes -->
+        
         <item name="actionDropDownStyle">@style/Widget.AppCompat.Spinner.DropDown.ActionBar</item>
 
-        <!-- Action Mode -->
+        
         <item name="actionModeStyle">@style/Widget.AppCompat.ActionMode</item>
         <item name="actionModeBackground">@drawable/abc_cab_background_top_material</item>
         <item name="actionModeSplitBackground">?attr/colorPrimaryDark</item>
@@ -2499,14 +2153,14 @@ battery_icon,connectivity_icon,date_icon,state_icon,media_icon,phone_icon,speake
         <item name="actionModeSelectAllDrawable">@drawable/abc_ic_menu_selectall_mtrl_alpha</item>
         <item name="actionModeShareDrawable">@drawable/abc_ic_menu_share_mtrl_alpha</item>
 
-        <!-- Panel attributes -->
+        
         <item name="panelMenuListWidth">@dimen/abc_panel_menu_list_width</item>
         <item name="panelMenuListTheme">@style/Theme.AppCompat.CompactMenu</item>
         <item name="panelBackground">@drawable/abc_menu_hardkey_panel_mtrl_mult</item>
         <item name="android:panelBackground">@android:color/transparent</item>
         <item name="listChoiceBackgroundIndicator">@drawable/abc_list_selector_holo_dark</item>
 
-        <!-- List attributes -->
+        
         <item name="textAppearanceListItem">@style/TextAppearance.AppCompat.Subhead</item>
         <item name="textAppearanceListItemSmall">@style/TextAppearance.AppCompat.Subhead</item>
         <item name="textAppearanceListItemSecondary">@style/TextAppearance.AppCompat.Body1</item>
@@ -2516,16 +2170,16 @@ battery_icon,connectivity_icon,date_icon,state_icon,media_icon,phone_icon,speake
         <item name="listPreferredItemPaddingLeft">@dimen/abc_list_item_padding_horizontal_material</item>
         <item name="listPreferredItemPaddingRight">@dimen/abc_list_item_padding_horizontal_material</item>
 
-        <!-- Spinner styles -->
+        
         <item name="spinnerStyle">@style/Widget.AppCompat.Spinner</item>
         <item name="android:spinnerItemStyle">@style/Widget.AppCompat.TextView.SpinnerItem</item>
         <item name="android:dropDownListViewStyle">@style/Widget.AppCompat.ListView.DropDown</item>
 
-        <!-- Required for use of support_simple_spinner_dropdown_item.xml -->
+        
         <item name="spinnerDropDownItemStyle">@style/Widget.AppCompat.DropDownItem.Spinner</item>
         <item name="dropdownListPreferredItemHeight">?attr/listPreferredItemHeightSmall</item>
 
-        <!-- Popup Menu styles -->
+        
         <item name="popupMenuStyle">@style/Widget.AppCompat.PopupMenu</item>
         <item name="textAppearanceLargePopupMenu">@style/TextAppearance.AppCompat.Widget.PopupMenu.Large</item>
         <item name="textAppearanceSmallPopupMenu">@style/TextAppearance.AppCompat.Widget.PopupMenu.Small</item>
@@ -2534,17 +2188,17 @@ battery_icon,connectivity_icon,date_icon,state_icon,media_icon,phone_icon,speake
         <item name="dropDownListViewStyle">?android:attr/dropDownListViewStyle</item>
         <item name="listMenuViewStyle">@style/Widget.AppCompat.ListMenuView</item>
 
-        <!-- SearchView attributes -->
+        
         <item name="searchViewStyle">@style/Widget.AppCompat.SearchView</item>
         <item name="android:dropDownItemStyle">@style/Widget.AppCompat.DropDownItem.Spinner</item>
         <item name="textColorSearchUrl">@color/abc_search_url_text</item>
         <item name="textAppearanceSearchResultTitle">@style/TextAppearance.AppCompat.SearchResult.Title</item>
         <item name="textAppearanceSearchResultSubtitle">@style/TextAppearance.AppCompat.SearchResult.Subtitle</item>
 
-        <!-- ShareActionProvider attributes -->
+        
         <item name="activityChooserViewStyle">@style/Widget.AppCompat.ActivityChooserView</item>
 
-        <!-- Toolbar styles -->
+        
         <item name="toolbarStyle">@style/Widget.AppCompat.Toolbar</item>
         <item name="toolbarNavigationButtonStyle">@style/Widget.AppCompat.Toolbar.Button.Navigation</item>
 
@@ -2553,7 +2207,7 @@ battery_icon,connectivity_icon,date_icon,state_icon,media_icon,phone_icon,speake
         <item name="editTextColor">?android:attr/textColorPrimary</item>
         <item name="autoCompleteTextViewStyle">@style/Widget.AppCompat.AutoCompleteTextView</item>
 
-        <!-- Color palette -->
+        
         <item name="colorPrimaryDark">@color/primary_dark_material_dark</item>
         <item name="colorPrimary">@color/primary_material_dark</item>
         <item name="colorAccent">@color/accent_material_dark</item>
@@ -2576,7 +2230,7 @@ battery_icon,connectivity_icon,date_icon,state_icon,media_icon,phone_icon,speake
         <item name="ratingBarStyleSmall">@style/Widget.AppCompat.RatingBar.Small</item>
         <item name="seekBarStyle">@style/Widget.AppCompat.SeekBar</item>
 
-        <!-- Button styles -->
+        
         <item name="buttonStyle">@style/Widget.AppCompat.Button</item>
         <item name="buttonStyleSmall">@style/Widget.AppCompat.Button.Small</item>
         <item name="android:textAppearanceButton">@style/TextAppearance.AppCompat.Widget.Button</item>
@@ -2589,7 +2243,7 @@ battery_icon,connectivity_icon,date_icon,state_icon,media_icon,phone_icon,speake
         <item name="buttonBarNegativeButtonStyle">?attr/buttonBarButtonStyle</item>
         <item name="buttonBarNeutralButtonStyle">?attr/buttonBarButtonStyle</item>
 
-        <!-- Dialog attributes -->
+        
         <item name="dialogTheme">@style/ThemeOverlay.AppCompat.Dialog</item>
         <item name="dialogPreferredPadding">@dimen/abc_dialog_padding_material</item>
 
@@ -2599,14 +2253,13 @@ battery_icon,connectivity_icon,date_icon,state_icon,media_icon,phone_icon,speake
         <item name="textColorAlertDialogListItem">@color/abc_primary_text_material_dark</item>
         <item name="listDividerAlertDialog">@null</item>
 
-        <!-- Define these here; ContextThemeWrappers around themes that define them should
-             always clear these values. -->
+        
         <item name="windowFixedWidthMajor">@null</item>
         <item name="windowFixedWidthMinor">@null</item>
         <item name="windowFixedHeightMajor">@null</item>
         <item name="windowFixedHeightMinor">@null</item>
 
-        <!-- Tooltip attributes -->
+        
         <item name="tooltipFrameBackground">@drawable/tooltip_frame_light</item>
         <item name="tooltipForegroundColor">@color/foreground_material_light</item>
 
@@ -2649,7 +2302,7 @@ battery_icon,connectivity_icon,date_icon,state_icon,media_icon,phone_icon,speake
 
         <item name="colorBackgroundFloating">@color/background_floating_material_light</item>
 
-        <!-- Used by MediaRouter -->
+        
         <item name="isLightTheme">true</item>
 
         <item name="selectableItemBackground">@drawable/abc_item_background_holo_light</item>
@@ -2660,7 +2313,7 @@ battery_icon,connectivity_icon,date_icon,state_icon,media_icon,phone_icon,speake
         <item name="dividerVertical">@drawable/abc_list_divider_mtrl_alpha</item>
         <item name="dividerHorizontal">@drawable/abc_list_divider_mtrl_alpha</item>
 
-        <!-- Action Bar Styles -->
+        
         <item name="actionBarTabStyle">@style/Widget.AppCompat.Light.ActionBar.TabView</item>
         <item name="actionBarTabBarStyle">@style/Widget.AppCompat.Light.ActionBar.TabBar</item>
         <item name="actionBarTabTextStyle">@style/Widget.AppCompat.Light.ActionBar.TabText</item>
@@ -2677,7 +2330,7 @@ battery_icon,connectivity_icon,date_icon,state_icon,media_icon,phone_icon,speake
         <item name="actionMenuTextAppearance">@style/TextAppearance.AppCompat.Widget.ActionBar.Menu</item>
         <item name="actionMenuTextColor">?android:attr/textColorPrimaryDisableOnly</item>
 
-        <!-- Action Mode -->
+        
         <item name="actionModeStyle">@style/Widget.AppCompat.ActionMode</item>
         <item name="actionModeBackground">@drawable/abc_cab_background_top_material</item>
         <item name="actionModeSplitBackground">?attr/colorPrimaryDark</item>
@@ -2690,17 +2343,17 @@ battery_icon,connectivity_icon,date_icon,state_icon,media_icon,phone_icon,speake
         <item name="actionModeSelectAllDrawable">@drawable/abc_ic_menu_selectall_mtrl_alpha</item>
         <item name="actionModeShareDrawable">@drawable/abc_ic_menu_share_mtrl_alpha</item>
 
-        <!-- Dropdown Spinner Attributes -->
+        
         <item name="actionDropDownStyle">@style/Widget.AppCompat.Light.Spinner.DropDown.ActionBar</item>
 
-        <!-- Panel attributes -->
+        
         <item name="panelMenuListWidth">@dimen/abc_panel_menu_list_width</item>
         <item name="panelMenuListTheme">@style/Theme.AppCompat.CompactMenu</item>
         <item name="panelBackground">@drawable/abc_menu_hardkey_panel_mtrl_mult</item>
         <item name="android:panelBackground">@android:color/transparent</item>
         <item name="listChoiceBackgroundIndicator">@drawable/abc_list_selector_holo_light</item>
 
-        <!-- List attributes -->
+        
         <item name="textAppearanceListItem">@style/TextAppearance.AppCompat.Subhead</item>
         <item name="textAppearanceListItemSmall">@style/TextAppearance.AppCompat.Subhead</item>
         <item name="textAppearanceListItemSecondary">@style/TextAppearance.AppCompat.Body1</item>
@@ -2710,16 +2363,16 @@ battery_icon,connectivity_icon,date_icon,state_icon,media_icon,phone_icon,speake
         <item name="listPreferredItemPaddingLeft">@dimen/abc_list_item_padding_horizontal_material</item>
         <item name="listPreferredItemPaddingRight">@dimen/abc_list_item_padding_horizontal_material</item>
 
-        <!-- Spinner styles -->
+        
         <item name="spinnerStyle">@style/Widget.AppCompat.Spinner</item>
         <item name="android:spinnerItemStyle">@style/Widget.AppCompat.TextView.SpinnerItem</item>
         <item name="android:dropDownListViewStyle">@style/Widget.AppCompat.ListView.DropDown</item>
 
-        <!-- Required for use of support_simple_spinner_dropdown_item.xml -->
+        
         <item name="spinnerDropDownItemStyle">@style/Widget.AppCompat.DropDownItem.Spinner</item>
         <item name="dropdownListPreferredItemHeight">?attr/listPreferredItemHeightSmall</item>
 
-        <!-- Popup Menu styles -->
+        
         <item name="popupMenuStyle">@style/Widget.AppCompat.Light.PopupMenu</item>
         <item name="textAppearanceLargePopupMenu">@style/TextAppearance.AppCompat.Light.Widget.PopupMenu.Large</item>
         <item name="textAppearanceSmallPopupMenu">@style/TextAppearance.AppCompat.Light.Widget.PopupMenu.Small</item>
@@ -2728,17 +2381,17 @@ battery_icon,connectivity_icon,date_icon,state_icon,media_icon,phone_icon,speake
         <item name="dropDownListViewStyle">?android:attr/dropDownListViewStyle</item>
         <item name="listMenuViewStyle">@style/Widget.AppCompat.ListMenuView</item>
 
-        <!-- SearchView attributes -->
+        
         <item name="searchViewStyle">@style/Widget.AppCompat.Light.SearchView</item>
         <item name="android:dropDownItemStyle">@style/Widget.AppCompat.DropDownItem.Spinner</item>
         <item name="textColorSearchUrl">@color/abc_search_url_text</item>
         <item name="textAppearanceSearchResultTitle">@style/TextAppearance.AppCompat.SearchResult.Title</item>
         <item name="textAppearanceSearchResultSubtitle">@style/TextAppearance.AppCompat.SearchResult.Subtitle</item>
 
-        <!-- ShareActionProvider attributes -->
+        
         <item name="activityChooserViewStyle">@style/Widget.AppCompat.ActivityChooserView</item>
 
-        <!-- Toolbar styles -->
+        
         <item name="toolbarStyle">@style/Widget.AppCompat.Toolbar</item>
         <item name="toolbarNavigationButtonStyle">@style/Widget.AppCompat.Toolbar.Button.Navigation</item>
 
@@ -2747,7 +2400,7 @@ battery_icon,connectivity_icon,date_icon,state_icon,media_icon,phone_icon,speake
         <item name="editTextColor">?android:attr/textColorPrimary</item>
         <item name="autoCompleteTextViewStyle">@style/Widget.AppCompat.AutoCompleteTextView</item>
 
-        <!-- Color palette -->
+        
         <item name="colorPrimaryDark">@color/primary_dark_material_light</item>
         <item name="colorPrimary">@color/primary_material_light</item>
         <item name="colorAccent">@color/accent_material_light</item>
@@ -2770,7 +2423,7 @@ battery_icon,connectivity_icon,date_icon,state_icon,media_icon,phone_icon,speake
         <item name="ratingBarStyleSmall">@style/Widget.AppCompat.RatingBar.Small</item>
         <item name="seekBarStyle">@style/Widget.AppCompat.SeekBar</item>
 
-        <!-- Button styles -->
+        
         <item name="buttonStyle">@style/Widget.AppCompat.Button</item>
         <item name="buttonStyleSmall">@style/Widget.AppCompat.Button.Small</item>
         <item name="android:textAppearanceButton">@style/TextAppearance.AppCompat.Widget.Button</item>
@@ -2783,7 +2436,7 @@ battery_icon,connectivity_icon,date_icon,state_icon,media_icon,phone_icon,speake
         <item name="buttonBarNegativeButtonStyle">?attr/buttonBarButtonStyle</item>
         <item name="buttonBarNeutralButtonStyle">?attr/buttonBarButtonStyle</item>
 
-        <!-- Dialog attributes -->
+        
         <item name="dialogTheme">@style/ThemeOverlay.AppCompat.Dialog</item>
         <item name="dialogPreferredPadding">@dimen/abc_dialog_padding_material</item>
 
@@ -2793,14 +2446,13 @@ battery_icon,connectivity_icon,date_icon,state_icon,media_icon,phone_icon,speake
         <item name="textColorAlertDialogListItem">@color/abc_primary_text_material_light</item>
         <item name="listDividerAlertDialog">@null</item>
 
-        <!-- Define these here; ContextThemeWrappers around themes that define them should
-             always clear these values. -->
+        
         <item name="windowFixedWidthMajor">@null</item>
         <item name="windowFixedWidthMinor">@null</item>
         <item name="windowFixedHeightMajor">@null</item>
         <item name="windowFixedHeightMinor">@null</item>
 
-        <!-- Tooltip attributes -->
+        
         <item name="tooltipFrameBackground">@drawable/tooltip_frame_dark</item>
         <item name="tooltipForegroundColor">@color/foreground_material_dark</item>
 
@@ -3202,9 +2854,9 @@ battery_icon,connectivity_icon,date_icon,state_icon,media_icon,phone_icon,speake
     </style>
     <style name="NavigationDrawerStyle">
 
-        <item name="android:textSize">@dimen/_11sdp</item><!-- text size in menu-->
-        <!--<item name="android:listPreferredItemHeightSmall">15dp</item>&lt;!&ndash; item size in menu&ndash;&gt;-->
-        <item name="listPreferredItemHeightSmall">@dimen/_26sdp</item><!-- item size in menu-->
+        <item name="android:textSize">@dimen/_11sdp</item>
+        
+        <item name="listPreferredItemHeightSmall">@dimen/_26sdp</item>
         <item name="android:paddingLeft">0dip</item>
         <item name="android:paddingRight">0dip</item>
 
@@ -3218,7 +2870,7 @@ battery_icon,connectivity_icon,date_icon,state_icon,media_icon,phone_icon,speake
         <item name="android:buttonBarButtonStyle">?attr/buttonBarButtonStyle</item>
         <item name="android:borderlessButtonStyle">?attr/borderlessButtonStyle</item>
 
-        <!-- Window colors -->
+        
         <item name="android:colorForeground">@color/foreground_material_dark</item>
         <item name="android:colorForegroundInverse">@color/foreground_material_light</item>
         <item name="android:colorBackground">@color/background_material_dark</item>
@@ -3227,7 +2879,7 @@ battery_icon,connectivity_icon,date_icon,state_icon,media_icon,phone_icon,speake
         <item name="android:backgroundDimAmount">0.6</item>
         <item name="android:windowBackground">@color/background_material_dark</item>
 
-        <!-- Text colors -->
+        
         <item name="android:textColorPrimary">@color/abc_primary_text_material_dark</item>
         <item name="android:textColorPrimaryInverse">@color/abc_primary_text_material_light</item>
         <item name="android:textColorPrimaryDisableOnly">@color/abc_primary_text_disable_only_material_dark</item>
@@ -3243,7 +2895,7 @@ battery_icon,connectivity_icon,date_icon,state_icon,media_icon,phone_icon,speake
         <item name="android:textColorLinkInverse">?attr/colorAccent</item>
         <item name="android:textColorAlertDialogListItem">@color/abc_primary_text_material_dark</item>
 
-        <!-- Text styles -->
+        
         <item name="android:textAppearance">@style/TextAppearance.AppCompat</item>
         <item name="android:textAppearanceInverse">@style/TextAppearance.AppCompat.Inverse</item>
         <item name="android:textAppearanceLarge">@style/TextAppearance.AppCompat.Large</item>
@@ -3276,7 +2928,7 @@ battery_icon,connectivity_icon,date_icon,state_icon,media_icon,phone_icon,speake
         <item name="android:buttonBarButtonStyle">?attr/buttonBarButtonStyle</item>
         <item name="android:borderlessButtonStyle">?attr/borderlessButtonStyle</item>
 
-        <!-- Window colors -->
+        
         <item name="android:colorForeground">@color/foreground_material_light</item>
         <item name="android:colorForegroundInverse">@color/foreground_material_dark</item>
         <item name="android:colorBackground">@color/background_material_light</item>
@@ -3285,7 +2937,7 @@ battery_icon,connectivity_icon,date_icon,state_icon,media_icon,phone_icon,speake
         <item name="android:backgroundDimAmount">0.6</item>
         <item name="android:windowBackground">@color/background_material_light</item>
 
-        <!-- Text colors -->
+        
         <item name="android:textColorPrimary">@color/abc_primary_text_material_light</item>
         <item name="android:textColorPrimaryInverse">@color/abc_primary_text_material_dark</item>
         <item name="android:textColorSecondary">@color/abc_secondary_text_material_light</item>
@@ -3302,7 +2954,7 @@ battery_icon,connectivity_icon,date_icon,state_icon,media_icon,phone_icon,speake
         <item name="android:textColorLinkInverse">?attr/colorAccent</item>
         <item name="android:textColorAlertDialogListItem">@color/abc_primary_text_material_light</item>
 
-        <!-- Text styles -->
+        
         <item name="android:textAppearance">@style/TextAppearance.AppCompat</item>
         <item name="android:textAppearanceInverse">@style/TextAppearance.AppCompat.Inverse</item>
         <item name="android:textAppearanceLarge">@style/TextAppearance.AppCompat.Large</item>
@@ -3329,12 +2981,12 @@ battery_icon,connectivity_icon,date_icon,state_icon,media_icon,phone_icon,speake
     </style>
     <style name="Platform.ThemeOverlay.AppCompat" parent=""/>
     <style name="Platform.ThemeOverlay.AppCompat.Dark">
-        <!-- Action Bar styles -->
+        
         <item name="actionBarItemBackground">@drawable/abc_item_background_holo_dark</item>
         <item name="actionDropDownStyle">@style/Widget.AppCompat.Spinner.DropDown.ActionBar</item>
         <item name="selectableItemBackground">@drawable/abc_item_background_holo_dark</item>
 
-        <!-- SearchView styles -->
+        
         <item name="android:autoCompleteTextViewStyle">@style/Widget.AppCompat.AutoCompleteTextView</item>
         <item name="android:dropDownItemStyle">@style/Widget.AppCompat.DropDownItem.Spinner</item>
     </style>
@@ -3343,7 +2995,7 @@ battery_icon,connectivity_icon,date_icon,state_icon,media_icon,phone_icon,speake
         <item name="actionDropDownStyle">@style/Widget.AppCompat.Light.Spinner.DropDown.ActionBar</item>
         <item name="selectableItemBackground">@drawable/abc_item_background_holo_light</item>
 
-        <!-- SearchView attributes -->
+        
         <item name="android:autoCompleteTextViewStyle">@style/Widget.AppCompat.Light.AutoCompleteTextView</item>
         <item name="android:dropDownItemStyle">@style/Widget.AppCompat.DropDownItem.Spinner</item>
     </style>

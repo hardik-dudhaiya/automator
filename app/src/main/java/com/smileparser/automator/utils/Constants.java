@@ -7,4 +7,6 @@ package com.smileparser.automator.utils;
 public class Constants {
 
     public static final String IS_MACRO_ENABLED = "isMacroEnabled";
+
+    public static final String IS_FIRST_LAUNCH = "isFirstLaunch";
 }

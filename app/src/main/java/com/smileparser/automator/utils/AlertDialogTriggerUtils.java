@@ -18,8 +18,7 @@ import android.widget.TextView;
 import android.widget.TimePicker;
 
 import com.smileparser.automator.R;
-import com.smileparser.automator.triggeractionmanager.EventManagementUtil;
-import com.smileparser.automator.triggeractionmanager.EventValue;
+import com.smileparser.automator.db_helper.EventValueModel;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -28,6 +27,7 @@ import javax.annotation.Nullable;
 
 public class AlertDialogTriggerUtils {
 
+    private static int selectedItem;
     private static AlertDialog alertDialog;
 
     public static void dismissDialog() {
@@ -38,14 +38,15 @@ public class AlertDialogTriggerUtils {
     }
 
     public static void showAlertDialog(Activity activity, @Nullable String title, @Nullable ArrayAdapter adapter, okListener okListener) {
+
         AlertDialog.Builder builder = new AlertDialog.Builder(activity);
         if (title != null)
             builder.setTitle(title);
 
         if (adapter != null)
-            builder.setAdapter(adapter, (dialog, which) -> okListener.onItemClick(which));
+            builder.setAdapter(adapter, (dialog, which) -> selectedItem = which);
 
-        builder.setPositiveButton("OK", (dialog, which) -> okListener.onOkClick());
+        builder.setPositiveButton("OK", (dialog, which) -> okListener.onItemClick(selectedItem));
 
         alertDialog = builder.create();
 
@@ -104,7 +105,7 @@ public class AlertDialogTriggerUtils {
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                ((TextView) ItemView.findViewById(R.id.progress_text_view)).setText(String.valueOf(seekBar.getProgress()) + "%");
+                ((TextView) ItemView.findViewById(R.id.progress_text_view)).setText(String.format("%s %%", String.valueOf(seekBar.getProgress())));
             }
 
             @Override
@@ -120,9 +121,8 @@ public class AlertDialogTriggerUtils {
 
         builder.setPositiveButton("Done", (dialogInterface, i) -> {
             dialogInterface.dismiss();
-            int batteryLevelValue = Integer.parseInt(((TextView) ItemView.findViewById(R.id.progress_text_view)).getText().toString());
             int option = ((RadioButton) ItemView.findViewById(R.id.increases_radio_button)).isChecked() ? 1 : 2;
-            EventManagementUtil.addTriggerEvent(activity, triggerId, new EventValue(option, String.valueOf(batteryLevelValue)));
+            EventManagementUtil.addTriggerEvent(triggerId, new EventValueModel(option, String.valueOf(seekBar.getProgress())));
         });
         builder.create().show();
     }
@@ -143,7 +143,7 @@ public class AlertDialogTriggerUtils {
             dialogInterface.dismiss();
             int batteryLevelValue = Integer.parseInt(((TextView) ItemView.findViewById(R.id.progress_text_view)).getText().toString());
             int option = ((RadioGroup) ItemView.findViewById(R.id.condition_radio_group)).getCheckedRadioButtonId() == R.id.make_call ? 1 : 2;
-            //EventManagementUtil.addTriggerEvent(activity, triggerId, new EventValue(option, String.valueOf(batteryLevelValue)));
+            //EventManagementUtil.addTriggerEvent(activity, triggerId, new EventValueModel(option, String.valueOf(batteryLevelValue)));
         });
         builder.create().show();
     }
@@ -162,7 +162,7 @@ public class AlertDialogTriggerUtils {
             dialogInterface.dismiss();
             int batteryLevelValue = Integer.parseInt(((TextView) ItemView.findViewById(R.id.progress_text_view)).getText().toString());
             int option = ((RadioGroup) ItemView.findViewById(R.id.radio_check)).getCheckedRadioButtonId() == R.id.area_entered ? 1 : 2;
-            //EventManagementUtil.addTriggerEvent(activity, triggerId, new EventValue(option, String.valueOf(batteryLevelValue)));
+            //EventManagementUtil.addTriggerEvent(activity, triggerId, new EventValueModel(option, String.valueOf(batteryLevelValue)));
         });
         builder.create().show();
     }

@@ -8,7 +8,6 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 
 import com.smileparser.automator.R;
-import com.smileparser.automator.triggeractionmanager.EventManagementUtil;
 import com.smileparser.automator.triggeractionmanager.EventValue;
 
 import javax.annotation.Nullable;

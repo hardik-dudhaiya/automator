@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="D:\Git\Automator\automator\app\src\main\assets"><file name="fonts/BebasNeue.ttf" path="D:\Git\Automator\automator\app\src\main\assets\fonts\BebasNeue.ttf"/><file name="fonts/Poppins.otf" path="D:\Git\Automator\automator\app\src\main\assets\fonts\Poppins.otf"/></source><source path="D:\Git\Automator\automator\app\build\generated\assets\shaders\debug"/></dataSet><dataSet config="debug"><source path="D:\Git\Automator\automator\app\src\debug\assets"/></dataSet></merger>

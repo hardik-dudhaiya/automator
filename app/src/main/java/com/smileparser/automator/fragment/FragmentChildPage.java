@@ -20,12 +20,15 @@ import android.widget.Toast;
 import com.smileparser.automator.R;
 import com.smileparser.automator.activity.ActivityCreateMacroPage;
 import com.smileparser.automator.adapter.AdapterChild;
+import com.smileparser.automator.db_helper.EventValueModel;
 import com.smileparser.automator.triggeractionmanager.BatteryLevelTrigger;
-import com.smileparser.automator.triggeractionmanager.EventManagementUtil;
-import com.smileparser.automator.triggeractionmanager.EventValue;
+import com.smileparser.automator.triggeractionmanager.BatterySaverTrigger;
+import com.smileparser.automator.triggeractionmanager.PowerButtonTrigger;
+import com.smileparser.automator.triggeractionmanager.PowerConnectionTrigger;
 import com.smileparser.automator.utils.AlertDialogActionUtils;
 import com.smileparser.automator.utils.AlertDialogConstraintsUtils;
 import com.smileparser.automator.utils.AlertDialogTriggerUtils;
+import com.smileparser.automator.utils.EventManagementUtil;
 import com.smileparser.automator.utils.PermissionUtil;
 import com.smileparser.automator.utils.Utility;
 
@@ -263,49 +266,49 @@ public class FragmentChildPage extends Fragment {
     }
 
     private void loadInnerTriggerData() {
-        imageList = Utility.getResource().getString(R.string.trigger_icon_img).split(",");
+        imageList = Utility.getResource().getString(R.string.trigger_list_images).split(",");
         switch (eventName.trim()) {
             case "Battery/power": {
                 imgIcon.setImageResource(Utility.getResource().getIdentifier(imageList[0], "drawable", getActivity().getPackageName()));
-                actionLabel = Utility.getResource().getString(R.string.beterry_data).split(",");
-                actionImage = Utility.getResource().getString(R.string.bettry_img).split(",");
+                actionLabel = Utility.getResource().getString(R.string.tr_battery_labels).split(",");
+                actionImage = Utility.getResource().getString(R.string.tr_battery_images).split(",");
             }
             break;
             case "Call/SMS": {
                 imgIcon.setImageResource(Utility.getResource().getIdentifier(imageList[1], "drawable", getActivity().getPackageName()));
-                actionLabel = Utility.getResource().getString(R.string.call_sma_data).split(",");
-                actionImage = Utility.getResource().getString(R.string.call_sms_img).split(",");
+                actionLabel = Utility.getResource().getString(R.string.tr_call_sms_labels).split(",");
+                actionImage = Utility.getResource().getString(R.string.tr_call_sms_images).split(",");
 
             }
             break;
             case "Connectivity": {
                 imgIcon.setImageResource(Utility.getResource().getIdentifier(imageList[2], "drawable", getActivity().getPackageName()));
-                actionLabel = Utility.getResource().getString(R.string.connectivity_data).split(",");
-                actionImage = Utility.getResource().getString(R.string.connectivity_img).split(",");
+                actionLabel = Utility.getResource().getString(R.string.tr_connectivity_labels).split(",");
+                actionImage = Utility.getResource().getString(R.string.tr_connectivity_images).split(",");
             }
             break;
             case "Date/Time": {
                 imgIcon.setImageResource(Utility.getResource().getIdentifier(imageList[3], "drawable", getActivity().getPackageName()));
-                actionLabel = Utility.getResource().getString(R.string.date_time_data).split(",");
-                actionImage = Utility.getResource().getString(R.string.date_time_img).split(",");
+                actionLabel = Utility.getResource().getString(R.string.tr_date_time_labels).split(",");
+                actionImage = Utility.getResource().getString(R.string.tr_date_time_images).split(",");
             }
             break;
             case "Device Events": {
                 imgIcon.setImageResource(Utility.getResource().getIdentifier(imageList[4], "drawable", getActivity().getPackageName()));
-                actionLabel = Utility.getResource().getString(R.string.device_event_data).split(",");
-                actionImage = Utility.getResource().getString(R.string.device_event_img).split(",");
+                actionLabel = Utility.getResource().getString(R.string.tr_device_event_labels).split(",");
+                actionImage = Utility.getResource().getString(R.string.tr_device_event_image).split(",");
             }
             break;
             case "Location": {
                 imgIcon.setImageResource(Utility.getResource().getIdentifier(imageList[5], "drawable", getActivity().getPackageName()));
-                actionLabel = Utility.getResource().getString(R.string.location_data).split(",");
-                actionImage = Utility.getResource().getString(R.string.location_img).split(",");
+                actionLabel = Utility.getResource().getString(R.string.tr_location_labels).split(",");
+                actionImage = Utility.getResource().getString(R.string.tr_location_image).split(",");
             }
             break;
             case "AppsMount/Specific": {
                 imgIcon.setImageResource(Utility.getResource().getIdentifier(imageList[6], "drawable", getActivity().getPackageName()));
-                actionLabel = Utility.getResource().getString(R.string.location_data).split(",");
-                actionImage = Utility.getResource().getString(R.string.date_time_data).split(",");
+                actionLabel = Utility.getResource().getString(R.string.tr_location_labels).split(",");
+                actionImage = Utility.getResource().getString(R.string.tr_date_time_labels).split(",");
             }
             break;
             default: {
@@ -319,8 +322,8 @@ public class FragmentChildPage extends Fragment {
         adapterChild.setOnActionMenuClickListener(new AdapterChild.EventListener() {
             @Override
             public void onTriggerMenuClicked(boolean isSelected, int position) {
-                Log.e("Android->", "onTriggerMenuClicked: " + position + " ==" + isSelected);
-                Log.e("Android->", "onTriggerMenuClicked: " + eventName);
+                /*Log.e("Android->", "onTriggerMenuClicked: " + position + " ==" + isSelected);
+                Log.e("Android->", "onTriggerMenuClicked: " + eventName);*/
 
                 switch (eventName) {
                     case "Battery/power": {
@@ -486,7 +489,7 @@ public class FragmentChildPage extends Fragment {
                             break;
                             case 3: {
                                 if (isSelected) {
-                                    AlertDialogActionUtils.showAlertDialogSingleChoiceOnly(ActivityCreateMacroPage.getInstance(), "Select Action", new ArrayAdapter<>(ActivityCreateMacroPage.getInstance(), android.R.layout.simple_list_item_single_choice, new ArrayList<>(Arrays.asList("5 Seconds","10 Seconds","30 Seconds","1 Minutes","2 Minutes","5 Minutes","10 Minutes","15 Minutes","20 Minutes","30 Minutes","45 Minutes","60 Minutes"))), new AlertDialogActionUtils.okCancelListener() {
+                                    AlertDialogActionUtils.showAlertDialogSingleChoiceOnly(ActivityCreateMacroPage.getInstance(), "Select Action", new ArrayAdapter<>(ActivityCreateMacroPage.getInstance(), android.R.layout.simple_list_item_single_choice, new ArrayList<>(Arrays.asList("5 Seconds", "10 Seconds", "30 Seconds", "1 Minutes", "2 Minutes", "5 Minutes", "10 Minutes", "15 Minutes", "20 Minutes", "30 Minutes", "45 Minutes", "60 Minutes"))), new AlertDialogActionUtils.okCancelListener() {
                                         @Override
                                         public void onOkClick() {
 
@@ -507,7 +510,7 @@ public class FragmentChildPage extends Fragment {
                             }
                             break;
                             case 4: {
-                                if(isSelected){
+                                if (isSelected) {
                                     //todo share location
                                 }
                             }
@@ -981,7 +984,7 @@ public class FragmentChildPage extends Fragment {
                                     break;
 
                                     case 1: {
-                                        EventManagementUtil.addTriggerEvent(ActivityCreateMacroPage.getInstance(), 1, new EventValue(BatteryLevelTrigger.BATTERY_LEVEL_ANY, null));
+                                        EventManagementUtil.addTriggerEvent(1, new EventValueModel(BatteryLevelTrigger.BATTERY_LEVEL_ANY, null));
                                     }
                                     break;
                                 }
@@ -1006,12 +1009,12 @@ public class FragmentChildPage extends Fragment {
                                 int selectedItem = (Integer) object;
                                 switch (selectedItem) {
                                     case 0: {
-                                        //
+                                        //: BatterySaverTrigger.BATTERY_SAVER_DISABLED
+                                        EventManagementUtil.addTriggerEvent(2, new EventValueModel(BatterySaverTrigger.BATTERY_SAVER_ENABLED, null));
                                     }
                                     break;
-
                                     case 1: {
-                                        //
+                                        EventManagementUtil.addTriggerEvent(2, new EventValueModel(BatterySaverTrigger.BATTERY_SAVER_DISABLED, null));
                                     }
                                     break;
                                 }
@@ -1036,17 +1039,17 @@ public class FragmentChildPage extends Fragment {
                                 int selectedItem = (Integer) object;
                                 switch (selectedItem) {
                                     case 0: {
-                                        //
+                                        EventManagementUtil.addTriggerEvent(3, new EventValueModel(PowerButtonTrigger.THREE_TIMES, null));
                                     }
                                     break;
 
                                     case 1: {
-                                        //
+                                        EventManagementUtil.addTriggerEvent(3, new EventValueModel(PowerButtonTrigger.FOUR_TIMES, null));
                                     }
                                     break;
 
                                     case 2: {
-                                        //
+                                        EventManagementUtil.addTriggerEvent(3, new EventValueModel(PowerButtonTrigger.FIVE_TIMES, null));
                                     }
                                     break;
                                 }
@@ -1070,13 +1073,14 @@ public class FragmentChildPage extends Fragment {
                             if (object != null && object instanceof Integer) {
                                 int selectedItem = (Integer) object;
                                 switch (selectedItem) {
+                                    // PowerConnectionTrigger.POWER_CONNECTED : PowerConnectionTrigger.POWER_DISCONNECTED;
                                     case 0: {
-                                        //
+                                        EventManagementUtil.addTriggerEvent(4, new EventValueModel(PowerConnectionTrigger.POWER_CONNECTED, null));
                                     }
                                     break;
 
                                     case 1: {
-                                        //
+                                        EventManagementUtil.addTriggerEvent(4, new EventValueModel(PowerConnectionTrigger.POWER_DISCONNECTED, null));
                                     }
                                     break;
                                 }

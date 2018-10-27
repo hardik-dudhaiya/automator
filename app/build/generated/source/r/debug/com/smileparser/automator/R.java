@@ -40,13 +40,10 @@ public final class R {
     public static final int design_appbar_state_list_animator=0x7f020000;
   }
   public static final class array {
-    public static final int action_labels=0x7f030000;
-    public static final int audio_stream=0x7f030001;
-    public static final int dayOfMonth=0x7f030002;
-    public static final int dayOfWeekList=0x7f030003;
-    public static final int monthList=0x7f030004;
-    public static final int trigger_images=0x7f030005;
-    public static final int trigger_labels=0x7f030006;
+    public static final int audio_stream=0x7f030000;
+    public static final int dayOfMonth=0x7f030001;
+    public static final int dayOfWeekList=0x7f030002;
+    public static final int monthList=0x7f030003;
   }
   public static final class attr {
     /**
@@ -2140,7 +2137,7 @@ public final class R {
      * <tr><td>barrier</td><td>2</td><td></td></tr>
      * <tr><td>chains</td><td>4</td><td></td></tr>
      * <tr><td>dimensions</td><td>8</td><td></td></tr>
-     * <tr><td>direct</td><td>1</td><td>direct, barriers, chains</td></tr>
+     * <tr><td>direct</td><td>1</td><td></td></tr>
      * <tr><td>groups</td><td>20</td><td></td></tr>
      * <tr><td>none</td><td>0</td><td></td></tr>
      * <tr><td>standard</td><td>7</td><td></td></tr>
@@ -5265,83 +5262,83 @@ public final class R {
     public static final int action_device_action_img=0x7f0e0026;
     public static final int action_device_setting_data=0x7f0e0027;
     public static final int action_device_setting_img=0x7f0e0028;
-    public static final int action_fragment_data=0x7f0e0029;
-    public static final int action_fragment_img=0x7f0e002a;
-    public static final int action_icon_img=0x7f0e002b;
-    public static final int action_location_data=0x7f0e002c;
-    public static final int action_location_img=0x7f0e002d;
-    public static final int action_media_data=0x7f0e002e;
-    public static final int action_media_img=0x7f0e002f;
-    public static final int action_messaging_data=0x7f0e0030;
-    public static final int action_messanging_img=0x7f0e0031;
-    public static final int action_phone_data=0x7f0e0032;
-    public static final int action_phone_img=0x7f0e0033;
-    public static final int action_screen_data=0x7f0e0034;
-    public static final int action_screen_img=0x7f0e0035;
-    public static final int action_settings=0x7f0e0036;
-    public static final int action_volume_data=0x7f0e0037;
-    public static final int action_voume_img=0x7f0e0038;
+    public static final int action_icon_img=0x7f0e0029;
+    public static final int action_images=0x7f0e002a;
+    public static final int action_location_data=0x7f0e002b;
+    public static final int action_location_img=0x7f0e002c;
+    public static final int action_media_data=0x7f0e002d;
+    public static final int action_media_img=0x7f0e002e;
+    public static final int action_messaging_data=0x7f0e002f;
+    public static final int action_messanging_img=0x7f0e0030;
+    public static final int action_phone_data=0x7f0e0031;
+    public static final int action_phone_img=0x7f0e0032;
+    public static final int action_screen_data=0x7f0e0033;
+    public static final int action_screen_img=0x7f0e0034;
+    public static final int action_settings=0x7f0e0035;
+    public static final int action_volume_data=0x7f0e0036;
+    public static final int action_voume_img=0x7f0e0037;
+    public static final int actions_labels=0x7f0e0038;
     public static final int app_name=0x7f0e0039;
     public static final int appbar_scrolling_view_behavior=0x7f0e003a;
-    public static final int beterry_data=0x7f0e003b;
-    public static final int bettry_img=0x7f0e003c;
-    public static final int bottom_sheet_behavior=0x7f0e003d;
-    public static final int call_sma_data=0x7f0e003e;
-    public static final int call_sms_img=0x7f0e003f;
-    public static final int character_counter_pattern=0x7f0e0040;
-    public static final int connectivity_data=0x7f0e0041;
-    public static final int connectivity_img=0x7f0e0042;
-    public static final int constraint_bettery=0x7f0e0043;
-    public static final int constraint_bettrey_img=0x7f0e0044;
-    public static final int constraint_connectivity_data=0x7f0e0045;
-    public static final int constraint_connectivity_img=0x7f0e0046;
-    public static final int constraint_date_time_data=0x7f0e0047;
-    public static final int constraint_date_time_img=0x7f0e0048;
-    public static final int constraint_device_state_data=0x7f0e0049;
-    public static final int constraint_device_state_img=0x7f0e004a;
-    public static final int constraint_fragment_data=0x7f0e004b;
-    public static final int constraint_fragment_img=0x7f0e004c;
-    public static final int constraint_icon_img=0x7f0e004d;
-    public static final int constraint_media_data=0x7f0e004e;
-    public static final int constraint_media_img=0x7f0e004f;
-    public static final int constraint_phone_data=0x7f0e0050;
-    public static final int constraint_phone_img=0x7f0e0051;
-    public static final int constraint_screen_sensor_data=0x7f0e0052;
-    public static final int constraint_screen_sensor_img=0x7f0e0053;
-    public static final int constraint_sensors_data=0x7f0e0054;
-    public static final int constraint_sensors_img=0x7f0e0055;
-    public static final int createnew_fragment_data=0x7f0e0056;
-    public static final int createnew_frgment_img=0x7f0e0057;
-    public static final int date_time_data=0x7f0e0058;
-    public static final int date_time_img=0x7f0e0059;
-    public static final int device_event_data=0x7f0e005a;
-    public static final int device_event_img=0x7f0e005b;
-    public static final int hello_blank_fragment=0x7f0e005c;
-    public static final int lbl_action=0x7f0e005d;
-    public static final int lbl_constrains=0x7f0e005e;
-    public static final int lbl_trigger=0x7f0e005f;
-    public static final int location_data=0x7f0e0060;
-    public static final int location_img=0x7f0e0061;
-    public static final int nav_header_desc=0x7f0e0062;
-    public static final int nav_header_subtitle=0x7f0e0063;
-    public static final int nav_header_title=0x7f0e0064;
-    public static final int navigation_drawer_close=0x7f0e0065;
-    public static final int navigation_drawer_open=0x7f0e0066;
-    public static final int password_toggle_content_description=0x7f0e0067;
-    public static final int path_password_eye=0x7f0e0068;
-    public static final int path_password_eye_mask_strike_through=0x7f0e0069;
-    public static final int path_password_eye_mask_visible=0x7f0e006a;
-    public static final int path_password_strike_through=0x7f0e006b;
-    public static final int search_menu_title=0x7f0e006c;
-    public static final int status_bar_notification_info_overflow=0x7f0e006d;
-    public static final int text_five=0x7f0e006e;
-    public static final int text_four=0x7f0e006f;
-    public static final int text_one=0x7f0e0070;
-    public static final int text_three=0x7f0e0071;
-    public static final int text_two=0x7f0e0072;
-    public static final int title_activity_create_macro=0x7f0e0073;
-    public static final int title_activity_main=0x7f0e0074;
-    public static final int trigger_icon_img=0x7f0e0075;
+    public static final int bottom_sheet_behavior=0x7f0e003b;
+    public static final int character_counter_pattern=0x7f0e003c;
+    public static final int constraint_bettery=0x7f0e003d;
+    public static final int constraint_bettrey_img=0x7f0e003e;
+    public static final int constraint_connectivity_data=0x7f0e003f;
+    public static final int constraint_connectivity_img=0x7f0e0040;
+    public static final int constraint_date_time_data=0x7f0e0041;
+    public static final int constraint_date_time_img=0x7f0e0042;
+    public static final int constraint_device_state_data=0x7f0e0043;
+    public static final int constraint_device_state_img=0x7f0e0044;
+    public static final int constraint_icon_img=0x7f0e0045;
+    public static final int constraint_images=0x7f0e0046;
+    public static final int constraint_labels=0x7f0e0047;
+    public static final int constraint_media_data=0x7f0e0048;
+    public static final int constraint_media_img=0x7f0e0049;
+    public static final int constraint_phone_data=0x7f0e004a;
+    public static final int constraint_phone_img=0x7f0e004b;
+    public static final int constraint_screen_sensor_data=0x7f0e004c;
+    public static final int constraint_screen_sensor_img=0x7f0e004d;
+    public static final int constraint_sensors_data=0x7f0e004e;
+    public static final int constraint_sensors_img=0x7f0e004f;
+    public static final int hello_blank_fragment=0x7f0e0050;
+    public static final int lbl_action=0x7f0e0051;
+    public static final int lbl_constrains=0x7f0e0052;
+    public static final int lbl_trigger=0x7f0e0053;
+    public static final int nav_header_desc=0x7f0e0054;
+    public static final int nav_header_subtitle=0x7f0e0055;
+    public static final int nav_header_title=0x7f0e0056;
+    public static final int navigation_drawer_close=0x7f0e0057;
+    public static final int navigation_drawer_open=0x7f0e0058;
+    public static final int password_toggle_content_description=0x7f0e0059;
+    public static final int path_password_eye=0x7f0e005a;
+    public static final int path_password_eye_mask_strike_through=0x7f0e005b;
+    public static final int path_password_eye_mask_visible=0x7f0e005c;
+    public static final int path_password_strike_through=0x7f0e005d;
+    public static final int search_menu_title=0x7f0e005e;
+    public static final int status_bar_notification_info_overflow=0x7f0e005f;
+    public static final int text_five=0x7f0e0060;
+    public static final int text_four=0x7f0e0061;
+    public static final int text_one=0x7f0e0062;
+    public static final int text_three=0x7f0e0063;
+    public static final int text_two=0x7f0e0064;
+    public static final int title_activity_create_macro=0x7f0e0065;
+    public static final int title_activity_main=0x7f0e0066;
+    public static final int tr_battery_images=0x7f0e0067;
+    public static final int tr_battery_labels=0x7f0e0068;
+    public static final int tr_call_sms_images=0x7f0e0069;
+    public static final int tr_call_sms_labels=0x7f0e006a;
+    public static final int tr_connectivity_images=0x7f0e006b;
+    public static final int tr_connectivity_labels=0x7f0e006c;
+    public static final int tr_date_time_images=0x7f0e006d;
+    public static final int tr_date_time_labels=0x7f0e006e;
+    public static final int tr_device_event_image=0x7f0e006f;
+    public static final int tr_device_event_labels=0x7f0e0070;
+    public static final int tr_location_image=0x7f0e0071;
+    public static final int tr_location_labels=0x7f0e0072;
+    public static final int trigger_images=0x7f0e0073;
+    public static final int trigger_labels=0x7f0e0074;
+    public static final int trigger_list_images=0x7f0e0075;
   }
   public static final class style {
     public static final int AlertDialog_AppCompat=0x7f0f0000;
@@ -10653,7 +10650,7 @@ public final class R {
      * <tr><td>barrier</td><td>2</td><td></td></tr>
      * <tr><td>chains</td><td>4</td><td></td></tr>
      * <tr><td>dimensions</td><td>8</td><td></td></tr>
-     * <tr><td>direct</td><td>1</td><td>direct, barriers, chains</td></tr>
+     * <tr><td>direct</td><td>1</td><td></td></tr>
      * <tr><td>groups</td><td>20</td><td></td></tr>
      * <tr><td>none</td><td>0</td><td></td></tr>
      * <tr><td>standard</td><td>7</td><td></td></tr>

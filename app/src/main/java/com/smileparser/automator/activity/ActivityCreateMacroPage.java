@@ -12,8 +12,12 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.smileparser.automator.R;
+import com.smileparser.automator.db_helper.MacroModel;
 import com.smileparser.automator.fragment.FragmentChildPage;
 import com.smileparser.automator.fragment.FragmentMainPage;
+import com.smileparser.automator.fragment.Inner_action_Fragment;
+import com.smileparser.automator.fragment.Inner_constraint_Fragment;
+import com.smileparser.automator.fragment.Inner_createnew_Fragment;
 import com.smileparser.automator.triggeractionmanager.Macro;
 import com.smileparser.automator.utils.PermissionUtil;
 import com.smileparser.automator.utils.SecondaryTextView;
@@ -26,7 +30,7 @@ public class ActivityCreateMacroPage extends BaseActivity {
 
     @SuppressLint("StaticFieldLeak")
     public static ActivityCreateMacroPage sInstance;
-    public Macro macro = new Macro();
+    public MacroModel macro = new MacroModel();
     Bundle bundle = new Bundle();
     boolean AllGranted = false;
     private LinearLayout _toolbar;
@@ -163,31 +167,5 @@ public class ActivityCreateMacroPage extends BaseActivity {
             }
             break;
         }*/
-    }
-
-    public void checkCallingPermission() {
-        new PermissionUtil(this)
-                .withListener(new PermissionUtil.setListener() {
-                    @Override
-                    public void onAllGranted() {
-                        AllGranted = true;
-                    }
-
-                    @Override
-                    public void onAllDenied() {
-                        AllGranted = false;
-                    }
-
-                    @Override
-                    public void onAskAgain(ArrayList<String> rationalePermissions) {
-                        AllGranted = false;
-                    }
-                })
-                .withPermission(Manifest.permission.READ_CALL_LOG,
-                        Manifest.permission.CALL_PHONE,
-                        Manifest.permission.PROCESS_OUTGOING_CALLS,
-                        Manifest.permission.READ_CONTACTS);
-
-
     }
 }
