@@ -1,8 +1,14 @@
 package com.smileparser.automator.db_helper;
 
-public class EventValueModel {
+import java.io.Serializable;
+
+
+public class EventValueModel implements Serializable {
     private int option;
     private String value;
+
+    public EventValueModel() {
+    }
 
     public EventValueModel(int option, String value) {
         this.option = option;

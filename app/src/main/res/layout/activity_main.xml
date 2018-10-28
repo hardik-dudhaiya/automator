@@ -410,16 +410,15 @@
 
     <!--Navigation Drawer-->
     <android.support.design.widget.NavigationView
-        android:background="@color/white"
         android:id="@+id/nav_view"
-
-        app:theme="@style/NavigationDrawerStyle"
- android:layout_width="@dimen/_195sdp"
+        android:layout_width="@dimen/_195sdp"
         android:layout_height="match_parent"
         android:layout_gravity="start"
+        android:background="@color/white"
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/header_nav"
         app:itemIconTint="@color/black"
-        app:menu="@menu/menu" />
+        app:menu="@menu/menu"
+        app:theme="@style/NavigationDrawerStyle" />
 
-    </android.support.v4.widget.DrawerLayout>
+</android.support.v4.widget.DrawerLayout>

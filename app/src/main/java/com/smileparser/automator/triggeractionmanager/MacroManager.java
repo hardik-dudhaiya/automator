@@ -14,7 +14,7 @@ public class MacroManager {
 
     Context context;
 
-    public MacroManager(Context context) {
+    MacroManager(Context context) {
         this.context = context;
     }
 
@@ -25,7 +25,7 @@ public class MacroManager {
         }
     }
 
-    void registerTrigger(TriggerDetails triggerDetails) {
+    private void registerTrigger(TriggerDetails triggerDetails) {
         Triggerable trigger = new TriggerFactory().getTrigger(context, triggerDetails);
         trigger.registerEvent(new OnTriggerListener() {
             @Override

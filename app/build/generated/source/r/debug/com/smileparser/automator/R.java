@@ -2137,7 +2137,7 @@ public final class R {
      * <tr><td>barrier</td><td>2</td><td></td></tr>
      * <tr><td>chains</td><td>4</td><td></td></tr>
      * <tr><td>dimensions</td><td>8</td><td></td></tr>
-     * <tr><td>direct</td><td>1</td><td></td></tr>
+     * <tr><td>direct</td><td>1</td><td>direct, barriers, chains</td></tr>
      * <tr><td>groups</td><td>20</td><td></td></tr>
      * <tr><td>none</td><td>0</td><td></td></tr>
      * <tr><td>standard</td><td>7</td><td></td></tr>
@@ -5250,34 +5250,34 @@ public final class R {
     public static final int abc_shareactionprovider_share_with=0x7f0e001a;
     public static final int abc_shareactionprovider_share_with_application=0x7f0e001b;
     public static final int abc_toolbar_collapse_description=0x7f0e001c;
-    public static final int action_application_data=0x7f0e001d;
-    public static final int action_application_img=0x7f0e001e;
-    public static final int action_camera_photo_data=0x7f0e001f;
-    public static final int action_camera_photo_img=0x7f0e0020;
-    public static final int action_connectivity_data=0x7f0e0021;
-    public static final int action_connectivity_img=0x7f0e0022;
-    public static final int action_date_time_data=0x7f0e0023;
-    public static final int action_datetime_img=0x7f0e0024;
-    public static final int action_device_action_data=0x7f0e0025;
-    public static final int action_device_action_img=0x7f0e0026;
-    public static final int action_device_setting_data=0x7f0e0027;
-    public static final int action_device_setting_img=0x7f0e0028;
-    public static final int action_icon_img=0x7f0e0029;
-    public static final int action_images=0x7f0e002a;
-    public static final int action_location_data=0x7f0e002b;
-    public static final int action_location_img=0x7f0e002c;
-    public static final int action_media_data=0x7f0e002d;
-    public static final int action_media_img=0x7f0e002e;
-    public static final int action_messaging_data=0x7f0e002f;
-    public static final int action_messanging_img=0x7f0e0030;
-    public static final int action_phone_data=0x7f0e0031;
-    public static final int action_phone_img=0x7f0e0032;
-    public static final int action_screen_data=0x7f0e0033;
-    public static final int action_screen_img=0x7f0e0034;
-    public static final int action_settings=0x7f0e0035;
-    public static final int action_volume_data=0x7f0e0036;
-    public static final int action_voume_img=0x7f0e0037;
-    public static final int actions_labels=0x7f0e0038;
+    public static final int action_camera_photo_data=0x7f0e001d;
+    public static final int action_camera_photo_img=0x7f0e001e;
+    public static final int action_connectivity_data=0x7f0e001f;
+    public static final int action_connectivity_img=0x7f0e0020;
+    public static final int action_date_time_data=0x7f0e0021;
+    public static final int action_datetime_img=0x7f0e0022;
+    public static final int action_device_action_data=0x7f0e0023;
+    public static final int action_device_action_img=0x7f0e0024;
+    public static final int action_device_setting_data=0x7f0e0025;
+    public static final int action_device_setting_img=0x7f0e0026;
+    public static final int action_icon_img=0x7f0e0027;
+    public static final int action_images=0x7f0e0028;
+    public static final int action_location_data=0x7f0e0029;
+    public static final int action_location_img=0x7f0e002a;
+    public static final int action_media_data=0x7f0e002b;
+    public static final int action_media_img=0x7f0e002c;
+    public static final int action_messaging_data=0x7f0e002d;
+    public static final int action_messanging_img=0x7f0e002e;
+    public static final int action_phone_data=0x7f0e002f;
+    public static final int action_phone_img=0x7f0e0030;
+    public static final int action_screen_data=0x7f0e0031;
+    public static final int action_screen_img=0x7f0e0032;
+    public static final int action_settings=0x7f0e0033;
+    public static final int action_volume_data=0x7f0e0034;
+    public static final int action_voume_img=0x7f0e0035;
+    public static final int actions_labels=0x7f0e0036;
+    public static final int ap_application_image=0x7f0e0037;
+    public static final int ap_application_labels=0x7f0e0038;
     public static final int app_name=0x7f0e0039;
     public static final int appbar_scrolling_view_behavior=0x7f0e003a;
     public static final int bottom_sheet_behavior=0x7f0e003b;
@@ -10650,7 +10650,7 @@ public final class R {
      * <tr><td>barrier</td><td>2</td><td></td></tr>
      * <tr><td>chains</td><td>4</td><td></td></tr>
      * <tr><td>dimensions</td><td>8</td><td></td></tr>
-     * <tr><td>direct</td><td>1</td><td></td></tr>
+     * <tr><td>direct</td><td>1</td><td>direct, barriers, chains</td></tr>
      * <tr><td>groups</td><td>20</td><td></td></tr>
      * <tr><td>none</td><td>0</td><td></td></tr>
      * <tr><td>standard</td><td>7</td><td></td></tr>

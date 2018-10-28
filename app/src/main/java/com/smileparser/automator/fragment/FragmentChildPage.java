@@ -28,6 +28,7 @@ import com.smileparser.automator.triggeractionmanager.PowerConnectionTrigger;
 import com.smileparser.automator.utils.AlertDialogActionUtils;
 import com.smileparser.automator.utils.AlertDialogConstraintsUtils;
 import com.smileparser.automator.utils.AlertDialogTriggerUtils;
+import com.smileparser.automator.utils.Constants;
 import com.smileparser.automator.utils.EventManagementUtil;
 import com.smileparser.automator.utils.PermissionUtil;
 import com.smileparser.automator.utils.Utility;
@@ -175,8 +176,8 @@ public class FragmentChildPage extends Fragment {
         switch (eventName.trim()) {
             case "Applications": {
                 imgIcon.setImageResource(Utility.getResource().getIdentifier(imageList[0], "drawable", getActivity().getPackageName()));
-                actionLabel = Utility.getResource().getString(R.string.action_application_data).split(",");
-                actionImage = Utility.getResource().getString(R.string.action_application_img).split(",");
+                actionLabel = Utility.getResource().getString(R.string.ap_application_labels).split(",");
+                actionImage = Utility.getResource().getString(R.string.ap_application_image).split(",");
             }
             break;
 
@@ -658,7 +659,69 @@ public class FragmentChildPage extends Fragment {
                     break;
 
                     case "Phone": {
+                        switch (position) {
+                            case 0: {
+                                if (isSelected) {
+                                    AlertDialogConstraintsUtils.showAlertDialogSingleChoiceOnly(ActivityCreateMacroPage.getInstance(), "Select Option", new ArrayAdapter<>(ActivityCreateMacroPage.getInstance(), android.R.layout.simple_list_item_single_choice, new ArrayList<>(Arrays.asList("In Call", "Not In Call"))), new AlertDialogConstraintsUtils.okCancelListener() {
+                                        @Override
+                                        public void onOkClick() {
 
+                                        }
+
+                                        @Override
+                                        public void onCancelClick() {
+
+                                        }
+
+                                        @Override
+                                        public void onItemClick(Object object) {
+                                            if (object != null && object instanceof Integer) {
+                                                switch ((Integer) object) {
+                                                    case 0:
+                                                        EventManagementUtil.addConstraintEvent(6, new EventValueModel(Constants.MODE_IN_CALL, null));
+                                                        break;
+                                                    case 1:
+                                                        EventManagementUtil.addConstraintEvent(6, new EventValueModel(Constants.MODE_NOT_IN_CALL, null));
+                                                        break;
+                                                }
+                                            }
+                                        }
+                                    });
+                                }
+                            }
+                            break;
+
+                            case 1: {
+                                if (isSelected) {
+                                    AlertDialogConstraintsUtils.showAlertDialogSingleChoiceOnly(ActivityCreateMacroPage.getInstance(), "Select Option", new ArrayAdapter<>(ActivityCreateMacroPage.getInstance(), android.R.layout.simple_list_item_single_choice, new ArrayList<>(Arrays.asList("Phone Ringing", "Phone Not Ringing"))), new AlertDialogConstraintsUtils.okCancelListener() {
+                                        @Override
+                                        public void onOkClick() {
+
+                                        }
+
+                                        @Override
+                                        public void onCancelClick() {
+
+                                        }
+
+                                        @Override
+                                        public void onItemClick(Object object) {
+                                            if (object != null && object instanceof Integer) {
+                                                switch ((Integer) object) {
+                                                    case 0:
+                                                        EventManagementUtil.addConstraintEvent(6, new EventValueModel(Constants.MODE_IN_PHONE_RINGING, null));
+                                                        break;
+                                                    case 1:
+                                                        EventManagementUtil.addConstraintEvent(6, new EventValueModel(Constants.MODE_NOT_PHONE_NOT_RINGING, null));
+                                                        break;
+                                                }
+                                            }
+                                        }
+                                    });
+                                }
+                            }
+                            break;
+                        }
                     }
                     break;
 
@@ -679,285 +742,6 @@ public class FragmentChildPage extends Fragment {
                 }
             }
         });
-    }
-
-    private void launchDeviceSettingActionsEvents(boolean isSelected, int position) {
-        switch (position) {
-            case 0: {
-                if (isSelected) {
-                    AlertDialogActionUtils.showAlertDialogSingleChoiceOnly(ActivityCreateMacroPage.getInstance(), "Select Action", new ArrayAdapter<>(ActivityCreateMacroPage.getInstance(), android.R.layout.simple_list_item_single_choice, new ArrayList<>(Arrays.asList("Auto Rotate On", "Auto Rotate Off", "Toggle"))), new AlertDialogActionUtils.okCancelListener() {
-                        @Override
-                        public void onOkClick() {
-
-                        }
-
-                        @Override
-                        public void onCancelClick() {
-
-                        }
-
-                        @Override
-                        public void onItemClick(Object object) {
-                            if (object != null && object instanceof Integer) {
-                            }
-                        }
-                    });
-                }
-            }
-            break;
-            case 1: {
-                if (isSelected) {
-                    AlertDialogActionUtils.showAlertDialogSingleChoiceOnly(ActivityCreateMacroPage.getInstance(), "Select Action", new ArrayAdapter<>(ActivityCreateMacroPage.getInstance(), android.R.layout.simple_list_item_single_choice, new ArrayList<>(Arrays.asList("Battery Saver On", "Battery Saver Off", "Toggle"))), new AlertDialogActionUtils.okCancelListener() {
-                        @Override
-                        public void onOkClick() {
-
-                        }
-
-                        @Override
-                        public void onCancelClick() {
-
-                        }
-
-                        @Override
-                        public void onItemClick(Object object) {
-                            if (object != null && object instanceof Integer) {
-                            }
-                        }
-                    });
-                }
-            }
-            break;
-        }
-    }
-
-    private void launchDeviceActionsEvents(boolean isSelected, int position) {
-        switch (position) {
-            case 0: {
-                if (isSelected) {
-                    //Launch Home
-                }
-            }
-            break;
-            case 1: {
-                if (isSelected) {
-                }
-                //Press Back // Accessibility feature
-            }
-            break;
-            case 2: {
-                AlertDialogActionUtils.showAlertDialogSingleChoiceOnly(ActivityCreateMacroPage.getInstance(), "Select Option", new ArrayAdapter<>(ActivityCreateMacroPage.getInstance(), android.R.layout.simple_list_item_single_choice, new ArrayList<>(Arrays.asList("Reboot", "Power Off", "Soft Reboot", "Power Off (Alternative)"))), new AlertDialogActionUtils.okCancelListener() {
-                    @Override
-                    public void onOkClick() {
-
-                    }
-
-                    @Override
-                    public void onCancelClick() {
-
-                    }
-
-                    @Override
-                    public void onItemClick(Object object) {
-                        if (object != null && object instanceof Integer) {
-                            //save here...
-                        }
-                    }
-                });
-            }
-            break;
-            case 3: {
-                if (isSelected) {
-                    AlertDialogActionUtils.showSpeechTestDialog(ActivityCreateMacroPage.getInstance(), "Speak Test");
-                }
-            }
-            break;
-            case 4: {
-                AlertDialogActionUtils.showAlertDialogSingleChoiceOnly(ActivityCreateMacroPage.getInstance(), "Select Option", new ArrayAdapter<>(ActivityCreateMacroPage.getInstance(), android.R.layout.simple_list_item_single_choice, new ArrayList<>(Arrays.asList("Blip", "Short Buzz", "Long Buzz", "Rapid", "Slow", "Increasing", "Constant", "Decreasing", "Final Fantasy", "Star Wars"))), new AlertDialogActionUtils.okCancelListener() {
-                    @Override
-                    public void onOkClick() {
-
-                    }
-
-                    @Override
-                    public void onCancelClick() {
-
-                    }
-
-                    @Override
-                    public void onItemClick(Object object) {
-                        if (object != null && object instanceof Integer) {
-                            //save here...
-                        }
-                    }
-                });
-            }
-            break;
-        }
-    }
-
-    private void launchDateTimeActionEvents(boolean isSelected, int position) {
-        switch (position) {
-            case 0: {
-                if (isSelected) {
-                    AlertDialogActionUtils.showAlertDialogSingleChoiceOnly(ActivityCreateMacroPage.getInstance(), "Select Option", new ArrayAdapter<>(ActivityCreateMacroPage.getInstance(), android.R.layout.simple_list_item_single_choice, new ArrayList<>(Arrays.asList("Set Alarm", "Disable Alarm", "Dismiss Active Alarm"))), new AlertDialogActionUtils.okCancelListener() {
-                        @Override
-                        public void onOkClick() {
-
-                        }
-
-                        @Override
-                        public void onCancelClick() {
-
-                        }
-
-                        @Override
-                        public void onItemClick(Object object) {
-                            if (object != null && object instanceof Integer) {
-                                switch ((Integer) object) {
-                                    case 0: {
-                                    }
-                                    break;
-                                    case 1: {
-                                    }
-                                    break;
-                                    case 2: {
-                                    }
-                                    break;
-                                }
-                            }
-                        }
-                    });
-                }
-            }
-            break;
-            case 1: {
-                if (isSelected) {
-                    AlertDialogActionUtils.showAlertDialogSingleChoiceOnly(ActivityCreateMacroPage.getInstance(), "Select Option", new ArrayAdapter<>(ActivityCreateMacroPage.getInstance(), android.R.layout.simple_list_item_single_choice, new ArrayList<>(Arrays.asList("24 Hour", "12 Hour"))), new AlertDialogActionUtils.okCancelListener() {
-                        @Override
-                        public void onOkClick() {
-
-                        }
-
-                        @Override
-                        public void onCancelClick() {
-
-                        }
-
-                        @Override
-                        public void onItemClick(Object object) {
-                            if (object != null && object instanceof Integer) {
-                                //Save Item...
-                            }
-                        }
-                    });
-                }
-            }
-            break;
-            case 2: {
-                if (isSelected) {
-                    Toast.makeText(getActivity(), "Stop Watch", Toast.LENGTH_SHORT).show();
-                }
-            }
-            break;
-        }
-    }
-
-    private void launchConnectivityActionEvents(boolean isSelected, int position) {
-        switch (position) {
-            case 0: {
-                if (isSelected) {
-                    AlertDialogActionUtils.showAlertDialogSingleChoiceOnly(ActivityCreateMacroPage.getInstance(), "Select Option", new ArrayAdapter<>(ActivityCreateMacroPage.getInstance(), android.R.layout.simple_list_item_single_choice, new ArrayList<>(Arrays.asList("Airplane Mode On", "Airplane Mode Off", "Airplane Mode Toggle"))), new AlertDialogActionUtils.okCancelListener() {
-                        @Override
-                        public void onOkClick() {
-
-                        }
-
-                        @Override
-                        public void onCancelClick() {
-
-                        }
-
-                        @Override
-                        public void onItemClick(Object object) {
-                            if (object != null && object instanceof Integer) {
-                                //Save Item...
-                            }
-                        }
-                    });
-                }
-            }
-            break;
-            case 1: {
-                if (isSelected) {
-                    AlertDialogActionUtils.showAlertDialogSingleChoiceOnly(ActivityCreateMacroPage.getInstance(), "Select Option", new ArrayAdapter<>(ActivityCreateMacroPage.getInstance(), android.R.layout.simple_list_item_single_choice, new ArrayList<>(Arrays.asList("Auto Sync On", "Auto Sync Off", "Auto Sync Toggle"))), new AlertDialogActionUtils.okCancelListener() {
-                        @Override
-                        public void onOkClick() {
-
-                        }
-
-                        @Override
-                        public void onCancelClick() {
-
-                        }
-
-                        @Override
-                        public void onItemClick(Object object) {
-                            if (object != null && object instanceof Integer) {
-                                //Save Item...
-                            }
-                        }
-                    });
-                }
-            }
-            break;
-            case 2: {
-                if (isSelected) {
-                    AlertDialogActionUtils.showAlertDialogSingleChoiceOnly(ActivityCreateMacroPage.getInstance(), "Select Option", new ArrayAdapter<>(ActivityCreateMacroPage.getInstance(), android.R.layout.simple_list_item_single_choice, new ArrayList<>(Arrays.asList("Enable Bluetooth", "Disable Bluetooth", "Toggle Bluetooth", "Connect Audio Device", "Disconnect Audio Device"))), new AlertDialogActionUtils.okCancelListener() {
-                        @Override
-                        public void onOkClick() {
-
-                        }
-
-                        @Override
-                        public void onCancelClick() {
-
-                        }
-
-                        @Override
-                        public void onItemClick(Object object) {
-                            if (object != null && object instanceof Integer) {
-                                //Save Item...
-                                //on Connect Disconnect on / off bluetooth
-                            }
-                        }
-                    });
-                }
-            }
-            break;
-            case 3: {
-                if (isSelected) {
-                    AlertDialogActionUtils.showAlertDialogSingleChoiceOnly(ActivityCreateMacroPage.getInstance(), "Select Option", new ArrayAdapter<>(ActivityCreateMacroPage.getInstance(), android.R.layout.simple_list_item_single_choice, new ArrayList<>(Arrays.asList("Mobile Data On", "Mobile Data Off", "Mobile Data Toggle"))), new AlertDialogActionUtils.okCancelListener() {
-                        @Override
-                        public void onOkClick() {
-
-                        }
-
-                        @Override
-                        public void onCancelClick() {
-
-                        }
-
-                        @Override
-                        public void onItemClick(Object object) {
-                            if (object != null && object instanceof Integer) {
-                                //Save Item...
-                            }
-                        }
-                    });
-                }
-            }
-            break;
-        }
     }
 
 
@@ -2006,6 +1790,330 @@ public class FragmentChildPage extends Fragment {
                                     }
                                 }
                             });
+                        }
+                    });
+                }
+            }
+            break;
+        }
+    }
+
+    private void launchDeviceSettingActionsEvents(boolean isSelected, int position) {
+        switch (position) {
+            case 0: {
+                if (isSelected) {
+                    AlertDialogActionUtils.showAlertDialogSingleChoiceOnly(ActivityCreateMacroPage.getInstance(), "Select Action", new ArrayAdapter<>(ActivityCreateMacroPage.getInstance(), android.R.layout.simple_list_item_single_choice, new ArrayList<>(Arrays.asList("Auto Rotate On", "Auto Rotate Off", "Toggle"))), new AlertDialogActionUtils.okCancelListener() {
+                        @Override
+                        public void onOkClick() {
+
+                        }
+
+                        @Override
+                        public void onCancelClick() {
+
+                        }
+
+                        @Override
+                        public void onItemClick(Object object) {
+                            if (object != null && object instanceof Integer) {
+                            }
+                        }
+                    });
+                }
+            }
+            break;
+            case 1: {
+                if (isSelected) {
+                    AlertDialogActionUtils.showAlertDialogSingleChoiceOnly(ActivityCreateMacroPage.getInstance(), "Select Action", new ArrayAdapter<>(ActivityCreateMacroPage.getInstance(), android.R.layout.simple_list_item_single_choice, new ArrayList<>(Arrays.asList("Battery Saver On", "Battery Saver Off", "Toggle"))), new AlertDialogActionUtils.okCancelListener() {
+                        @Override
+                        public void onOkClick() {
+
+                        }
+
+                        @Override
+                        public void onCancelClick() {
+
+                        }
+
+                        @Override
+                        public void onItemClick(Object object) {
+                            if (object != null && object instanceof Integer) {
+                            }
+                        }
+                    });
+                }
+            }
+            break;
+        }
+    }
+
+    private void launchDeviceActionsEvents(boolean isSelected, int position) {
+        switch (position) {
+            case 0: {
+                if (isSelected) {
+                    //Launch Home
+                }
+            }
+            break;
+            case 1: {
+                if (isSelected) {
+                }
+                //Press Back // Accessibility feature
+            }
+            break;
+            case 2: {
+                AlertDialogActionUtils.showAlertDialogSingleChoiceOnly(ActivityCreateMacroPage.getInstance(), "Select Option", new ArrayAdapter<>(ActivityCreateMacroPage.getInstance(), android.R.layout.simple_list_item_single_choice, new ArrayList<>(Arrays.asList("Reboot", "Power Off", "Soft Reboot", "Power Off (Alternative)"))), new AlertDialogActionUtils.okCancelListener() {
+                    @Override
+                    public void onOkClick() {
+
+                    }
+
+                    @Override
+                    public void onCancelClick() {
+
+                    }
+
+                    @Override
+                    public void onItemClick(Object object) {
+                        if (object != null && object instanceof Integer) {
+                            //save here...
+                        }
+                    }
+                });
+            }
+            break;
+            case 3: {
+                if (isSelected) {
+                    AlertDialogActionUtils.showSpeechTestDialog(ActivityCreateMacroPage.getInstance(), "Speak Test");
+                }
+            }
+            break;
+            case 4: {
+                AlertDialogActionUtils.showAlertDialogSingleChoiceOnly(ActivityCreateMacroPage.getInstance(), "Select Option", new ArrayAdapter<>(ActivityCreateMacroPage.getInstance(), android.R.layout.simple_list_item_single_choice, new ArrayList<>(Arrays.asList("Blip", "Short Buzz", "Long Buzz", "Rapid", "Slow", "Increasing", "Constant", "Decreasing", "Final Fantasy", "Star Wars"))), new AlertDialogActionUtils.okCancelListener() {
+                    @Override
+                    public void onOkClick() {
+
+                    }
+
+                    @Override
+                    public void onCancelClick() {
+
+                    }
+
+                    @Override
+                    public void onItemClick(Object object) {
+                        if (object != null && object instanceof Integer) {
+                            //save here...
+                        }
+                    }
+                });
+            }
+            break;
+        }
+    }
+
+    private void launchDateTimeActionEvents(boolean isSelected, int position) {
+        switch (position) {
+            case 0: {
+                if (isSelected) {
+                    AlertDialogActionUtils.showAlertDialogSingleChoiceOnly(ActivityCreateMacroPage.getInstance(), "Select Option", new ArrayAdapter<>(ActivityCreateMacroPage.getInstance(), android.R.layout.simple_list_item_single_choice, new ArrayList<>(Arrays.asList("Set Alarm", "Disable Alarm", "Dismiss Active Alarm"))), new AlertDialogActionUtils.okCancelListener() {
+                        @Override
+                        public void onOkClick() {
+
+                        }
+
+                        @Override
+                        public void onCancelClick() {
+
+                        }
+
+                        @Override
+                        public void onItemClick(Object object) {
+                            if (object != null && object instanceof Integer) {
+                                switch ((Integer) object) {
+                                    case 0: {
+                                    }
+                                    break;
+                                    case 1: {
+                                    }
+                                    break;
+                                    case 2: {
+                                    }
+                                    break;
+                                }
+                            }
+                        }
+                    });
+                }
+            }
+            break;
+            case 1: {
+                if (isSelected) {
+                    AlertDialogActionUtils.showAlertDialogSingleChoiceOnly(ActivityCreateMacroPage.getInstance(), "Select Option", new ArrayAdapter<>(ActivityCreateMacroPage.getInstance(), android.R.layout.simple_list_item_single_choice, new ArrayList<>(Arrays.asList("24 Hour", "12 Hour"))), new AlertDialogActionUtils.okCancelListener() {
+                        @Override
+                        public void onOkClick() {
+
+                        }
+
+                        @Override
+                        public void onCancelClick() {
+
+                        }
+
+                        @Override
+                        public void onItemClick(Object object) {
+                            if (object != null && object instanceof Integer) {
+                                //Save Item...
+                            }
+                        }
+                    });
+                }
+            }
+            break;
+            case 2: {
+                if (isSelected) {
+                    Toast.makeText(getActivity(), "Stop Watch", Toast.LENGTH_SHORT).show();
+                }
+            }
+            break;
+        }
+    }
+
+    private void launchConnectivityActionEvents(boolean isSelected, int position) {
+        switch (position) {
+            case 0: {
+                if (isSelected) {
+                    AlertDialogActionUtils.showAlertDialogSingleChoiceOnly(ActivityCreateMacroPage.getInstance(), "Select Option", new ArrayAdapter<>(ActivityCreateMacroPage.getInstance(), android.R.layout.simple_list_item_single_choice, new ArrayList<>(Arrays.asList("Airplane Mode On", "Airplane Mode Off", "Airplane Mode Toggle"))), new AlertDialogActionUtils.okCancelListener() {
+                        @Override
+                        public void onOkClick() {
+
+                        }
+
+                        @Override
+                        public void onCancelClick() {
+
+                        }
+
+                        @Override
+                        public void onItemClick(Object object) {
+                            if (object != null && object instanceof Integer) {
+                                switch ((Integer) object) {
+                                    case 0:
+                                        EventManagementUtil.addActionEvent(3, new EventValueModel(1, String.valueOf(Constants.AIRPLANE_MODE_ON)));
+                                        break;
+                                    case 1:
+                                        EventManagementUtil.addActionEvent(3, new EventValueModel(1, String.valueOf(Constants.AIRPLANE_MODE_OFF)));
+                                        break;
+                                    case 2:
+                                        EventManagementUtil.addActionEvent(3, new EventValueModel(1, String.valueOf(Constants.AIRPLANE_MODE_TOGGLE)));
+                                        break;
+                                }
+                            }
+                        }
+                    });
+                }
+            }
+            break;
+            case 1: {
+                if (isSelected) {
+                    AlertDialogActionUtils.showAlertDialogSingleChoiceOnly(ActivityCreateMacroPage.getInstance(), "Select Option", new ArrayAdapter<>(ActivityCreateMacroPage.getInstance(), android.R.layout.simple_list_item_single_choice, new ArrayList<>(Arrays.asList("Auto Sync On", "Auto Sync Off", "Auto Sync Toggle"))), new AlertDialogActionUtils.okCancelListener() {
+                        @Override
+                        public void onOkClick() {
+
+                        }
+
+                        @Override
+                        public void onCancelClick() {
+
+                        }
+
+                        @Override
+                        public void onItemClick(Object object) {
+                            if (object != null && object instanceof Integer) {
+                                switch ((Integer) object) {
+                                    case 0:
+                                        EventManagementUtil.addActionEvent(3, new EventValueModel(2, String.valueOf(Constants.AUTO_SYNC_MODE_ON)));
+                                        break;
+                                    case 1:
+                                        EventManagementUtil.addActionEvent(3, new EventValueModel(2, String.valueOf(Constants.AUTO_SYNC_MODE_OFF)));
+                                        break;
+                                    case 2:
+                                        EventManagementUtil.addActionEvent(3, new EventValueModel(2, String.valueOf(Constants.AUTO_SYNC_MODE_TOGGLE)));
+                                        break;
+                                }
+                            }
+                        }
+                    });
+                }
+            }
+            break;
+            case 2: {
+                if (isSelected) {
+                    AlertDialogActionUtils.showAlertDialogSingleChoiceOnly(ActivityCreateMacroPage.getInstance(), "Select Option", new ArrayAdapter<>(ActivityCreateMacroPage.getInstance(), android.R.layout.simple_list_item_single_choice, new ArrayList<>(Arrays.asList("Enable Bluetooth", "Disable Bluetooth", "Toggle Bluetooth", "Connect Audio Device", "Disconnect Audio Device"))), new AlertDialogActionUtils.okCancelListener() {
+                        @Override
+                        public void onOkClick() {
+
+                        }
+
+                        @Override
+                        public void onCancelClick() {
+
+                        }
+
+                        @Override
+                        public void onItemClick(Object object) {
+                            if (object != null && object instanceof Integer) {
+                                switch ((Integer) object) {
+                                    case 0:
+                                        EventManagementUtil.addActionEvent(3, new EventValueModel(3, String.valueOf(Constants.BLUETOOTH_ON)));
+                                        break;
+                                    case 1:
+                                        EventManagementUtil.addActionEvent(3, new EventValueModel(3, String.valueOf(Constants.BLUETOOTH_OFF)));
+                                        break;
+                                    case 2:
+                                        EventManagementUtil.addActionEvent(3, new EventValueModel(3, String.valueOf(Constants.BLUETOOTH_TOGGLE)));
+                                        break;
+                                    case 3:
+                                        EventManagementUtil.addActionEvent(3, new EventValueModel(3, String.valueOf(Constants.CONNECT_AUDIO)));
+                                        break;
+                                    case 4:
+                                        EventManagementUtil.addActionEvent(3, new EventValueModel(3, String.valueOf(Constants.DIS_CONNECT_AUDIO)));
+                                        break;
+                                }
+                            }
+                        }
+                    });
+                }
+            }
+            break;
+            case 3: {
+                if (isSelected) {
+                    AlertDialogActionUtils.showAlertDialogSingleChoiceOnly(ActivityCreateMacroPage.getInstance(), "Select Option", new ArrayAdapter<>(ActivityCreateMacroPage.getInstance(), android.R.layout.simple_list_item_single_choice, new ArrayList<>(Arrays.asList("Mobile Data On", "Mobile Data Off", "Mobile Data Toggle"))), new AlertDialogActionUtils.okCancelListener() {
+                        @Override
+                        public void onOkClick() {
+
+                        }
+
+                        @Override
+                        public void onCancelClick() {
+
+                        }
+
+                        @Override
+                        public void onItemClick(Object object) {
+                            if (object != null && object instanceof Integer) {
+                                switch ((Integer) object) {
+                                    case 0:
+                                        EventManagementUtil.addActionEvent(3, new EventValueModel(4, String.valueOf(Constants.MOBILE_DATA_MODE_ON)));
+                                        break;
+                                    case 1:
+                                        EventManagementUtil.addActionEvent(3, new EventValueModel(4, String.valueOf(Constants.MOBILE_DATA_MODE_OFF)));
+                                        break;
+                                    case 2:
+                                        EventManagementUtil.addActionEvent(3, new EventValueModel(4, String.valueOf(Constants.MOBILE_DATA_MODE_TOGGLE)));
+                                        break;
+                                }
+                            }
                         }
                     });
                 }

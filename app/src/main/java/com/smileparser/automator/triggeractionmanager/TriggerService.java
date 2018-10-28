@@ -12,12 +12,19 @@ import android.graphics.Color;
 import android.os.Build;
 import android.os.IBinder;
 import android.support.annotation.Nullable;
+import android.support.annotation.RequiresApi;
 import android.support.v4.app.NotificationCompat;
+import android.util.Log;
 
-import com.smileparser.automator.activity.ActivitySplashPage;
+import com.google.gson.Gson;
+import com.j256.ormlite.dao.Dao;
+import com.smileparser.automator.App;
 import com.smileparser.automator.R;
-import com.smileparser.automator.database.DatabaseHelper;
+import com.smileparser.automator.activity.ActivitySplashPage;
+import com.smileparser.automator.db_helper.MacroModel;
+import com.smileparser.automator.triggers_events.MacroManagerNew;
 
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -68,15 +75,19 @@ public class TriggerService extends Service {
         return foregroundNotification.build();
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.N)
     private void startMyOwnForeground() {
         String NOTIFICATION_CHANNEL_ID = getApplicationContext().getPackageName();
         String channelName = "Automator";
-        NotificationChannel chan = new NotificationChannel(NOTIFICATION_CHANNEL_ID, channelName, NotificationManager.IMPORTANCE_NONE);
-        chan.setLightColor(Color.BLUE);
-        chan.setLockscreenVisibility(Notification.VISIBILITY_PRIVATE);
+        NotificationChannel chan = null;
         NotificationManager manager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
         assert manager != null;
-        manager.createNotificationChannel(chan);
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+            chan = new NotificationChannel(NOTIFICATION_CHANNEL_ID, channelName, NotificationManager.IMPORTANCE_NONE);
+            chan.setLightColor(Color.BLUE);
+            chan.setLockscreenVisibility(Notification.VISIBILITY_PRIVATE);
+            manager.createNotificationChannel(chan);
+        }
 
         Intent intent = new Intent(this, ActivitySplashPage.class);
         PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, 0);
@@ -94,10 +105,21 @@ public class TriggerService extends Service {
     }
 
     void fetchAllMacrosFromDb() {
-        List<Macro> macroList = DatabaseHelper.getAppDatabase(this).getMacroDao().getAllMacros();
-
-        for (Macro macro : macroList) {
-            new MacroManager(this).registerMacro(macro);
+        Dao<MacroModel, Integer> macroModels = App.getDataBaseHelper().getDao(MacroModel.class);
+        try {
+            if (macroModels == null) {
+                Log.e("Android->", "fetchAllMacrosFromDb: Model null");
+            } else {
+                List<MacroModel> modelList = macroModels.queryForAll();
+                if (modelList != null) {
+                    for (MacroModel macro : modelList) {
+                        Log.e("Android->", "fetchAllMacrosFromDb: " + new Gson().toJson(macro));
+                        new MacroManagerNew(this).registerMacro(macro);
+                    }
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
     }
 }

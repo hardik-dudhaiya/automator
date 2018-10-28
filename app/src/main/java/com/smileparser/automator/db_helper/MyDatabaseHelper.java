@@ -14,8 +14,8 @@ import com.j256.ormlite.table.DatabaseTableConfig;
 import com.j256.ormlite.table.TableUtils;
 
 public class MyDatabaseHelper extends OrmLiteSqliteOpenHelper {
-    private static final String DATABASE_NAME = "helloAndroid.db";
-    private static final int DATABASE_VERSION = 1;
+    private static final String DATABASE_NAME = "macro_android.db";
+    private static final int DATABASE_VERSION = 2;
 
     /*private Dao<CategoryModel, Integer> simpleDao = null;
     private Dao<SubCategoryModel, Integer> subDao = null;
@@ -38,12 +38,22 @@ public class MyDatabaseHelper extends OrmLiteSqliteOpenHelper {
     public void onCreate(SQLiteDatabase db, ConnectionSource connectionSource) {
         try {
             try {
-                TableUtils.createTableIfNotExists(connectionSource, CategoryModel.class);
-                TableUtils.createTableIfNotExists(connectionSource, SubCategoryModel.class);
+                /*Names Of Category*/
+                TableUtils.createTableIfNotExists(connectionSource, TriggerLabelsModel.class);
+                TableUtils.createTableIfNotExists(connectionSource, ActionsLabelsModel.class);
+                TableUtils.createTableIfNotExists(connectionSource, ConstraintLabelsModel.class);
+                /*name of Category end*/
+
+                /*Names of Sub Category*/
+                TableUtils.createTableIfNotExists(connectionSource, SubTriggerLabelsModel.class);
+                TableUtils.createTableIfNotExists(connectionSource, SubConstraintLabelsModel.class);
+                TableUtils.createTableIfNotExists(connectionSource, SubActionsLabelsModel.class);
+                /*Names of Sub Category end*/
+
                 TableUtils.createTableIfNotExists(connectionSource, ActionModel.class);
                 TableUtils.createTableIfNotExists(connectionSource, ConstraintModel.class);
                 TableUtils.createTableIfNotExists(connectionSource, TriggerModel.class);
-                TableUtils.createTableIfNotExists(connectionSource, EventValueModel.class);
+                //TableUtils.createTableIfNotExists(connectionSource, EventValueModel.class);
                 TableUtils.createTableIfNotExists(connectionSource, MacroModel.class);
             } catch (java.sql.SQLException e) {
                 e.printStackTrace();
@@ -62,12 +72,22 @@ public class MyDatabaseHelper extends OrmLiteSqliteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, ConnectionSource connectionSource, int oldVersion, int newVersion) {
         try {
             Log.i(MyDatabaseHelper.class.getName(), "onUpgrade");
-            TableUtils.dropTable(connectionSource, CategoryModel.class, true);
-            TableUtils.dropTable(connectionSource, SubCategoryModel.class, true);
+            /*Category name start*/
+            TableUtils.dropTable(connectionSource, TriggerLabelsModel.class, true);
+            TableUtils.dropTable(connectionSource, ActionsLabelsModel.class, true);
+            TableUtils.dropTable(connectionSource, ConstraintLabelsModel.class, true);
+            /*Category name end*/
+
+            /*Names of Sub Category */
+            TableUtils.dropTable(connectionSource, SubTriggerLabelsModel.class, true);
+            TableUtils.dropTable(connectionSource, SubConstraintLabelsModel.class, true);
+            TableUtils.dropTable(connectionSource, SubActionsLabelsModel.class, true);
+            /*Names of Sub Category End */
+
             TableUtils.dropTable(connectionSource, ActionModel.class, true);
             TableUtils.dropTable(connectionSource, ConstraintModel.class, true);
             TableUtils.dropTable(connectionSource, TriggerModel.class, true);
-            TableUtils.dropTable(connectionSource, EventValueModel.class, true);
+            //TableUtils.dropTable(connectionSource, EventValueModel.class, true);
             TableUtils.dropTable(connectionSource, MacroModel.class, true);
             onCreate(db, connectionSource);
         } catch (SQLException e) {

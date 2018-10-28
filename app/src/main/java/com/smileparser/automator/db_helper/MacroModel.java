@@ -1,27 +1,36 @@
 package com.smileparser.automator.db_helper;
 
 
+import com.google.gson.annotations.SerializedName;
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
 
-@DatabaseTable(tableName = MacroModel.TABLE_NAME, daoClass = CustomDao.class)
-public class MacroModel {
+import java.io.Serializable;
+
+//@DatabaseTable(tableName = MacroModel.TABLE_NAME, daoClass = CustomDao.class)
+@DatabaseTable(tableName = MacroModel.TABLE_NAME)
+public class MacroModel implements Serializable {
 
     static final String TABLE_NAME = "MacroModel";
 
     @DatabaseField(columnName = "mId", generatedId = true, allowGeneratedIdInsert = true)
+    @SerializedName("Id")
     private Long Id;
 
     @DatabaseField(columnName = "mIsActive")
+    @SerializedName("isActive")
     private boolean isActive;
 
-    @DatabaseField(columnName = "mTriggerDetails")
+    @DatabaseField(columnName = "mTriggerDetails", persisterClass = SerializableCollectionsType.class)
+    @SerializedName("triggerModel")
     private TriggerModel triggerModel;
 
-    @DatabaseField(columnName = "mActionDetails")
+    @DatabaseField(columnName = "mActionDetails", persisterClass = SerializableCollectionsType.class)
+    @SerializedName("actionModel")
     private ActionModel actionModel;
 
-    @DatabaseField(columnName = "mConstraintDetail")
+    @DatabaseField(columnName = "mConstraintDetail", persisterClass = SerializableCollectionsType.class)
+    @SerializedName("constraintModel")
     private ConstraintModel constraintModel;
 
     public Long getId() {

@@ -61,8 +61,8 @@ public class Inner_action_Fragment extends Fragment implements OnActionMenuClick
             Log.e( "Img", title_img[1] );
             if (sName.endsWith("Applications")) {
                 id = getResources().getIdentifier(title_img[0], "drawable", getActivity().getPackageName());
-                actionimg_name = getResources().getString(R.string.action_application_data).split(",");
-                actionimg_img = getResources().getString(R.string.action_application_img).split(",");
+                actionimg_name = getResources().getString(R.string.ap_application_labels).split(",");
+                actionimg_img = getResources().getString(R.string.ap_application_image).split(",");
             }
             if (sName.endsWith("Camera/Photo")) {
                 id = getResources().getIdentifier( title_img[1], "drawable", getActivity().getPackageName() );

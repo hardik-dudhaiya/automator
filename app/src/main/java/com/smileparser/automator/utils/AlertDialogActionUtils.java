@@ -55,9 +55,9 @@ public class AlertDialogActionUtils {
             builder.setTitle(title);
 
         if (adapter != null)
-            builder.setAdapter(adapter, (dialog, which) -> selected_item = which);
+            builder.setAdapter(adapter, (dialog, which) -> okListener.onItemClick(which));
 
-        builder.setPositiveButton("OK", (dialog, which) -> okListener.onItemClick(selected_item));
+        builder.setPositiveButton("OK", (dialog, which) -> okListener.onOkClick());
 
         builder.setNegativeButton("Cancel", (dialog, which) -> okListener.onCancelClick());
 

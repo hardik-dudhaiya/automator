@@ -3,18 +3,65 @@ package com.smileparser.automator.utils;
 import android.app.Activity;
 import android.support.v7.app.AlertDialog;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.RadioGroup;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
 import com.smileparser.automator.R;
-import com.smileparser.automator.triggeractionmanager.EventValue;
 
 import javax.annotation.Nullable;
 
 public class AlertDialogConstraintsUtils {
 
     private static AlertDialog alertDialog;
+
+    public static void dismisDialog() {
+        if (alertDialog == null)
+            return;
+        alertDialog.cancel();
+        alertDialog.dismiss();
+    }
+
+    public static void showAlertDialog(Activity activity, @Nullable String title, @Nullable ArrayAdapter adapter, AlertDialogConstraintsUtils.okCancelListener okListener) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(activity);
+        if (title != null)
+            builder.setTitle(title);
+
+        if (adapter != null)
+            builder.setAdapter(adapter, (dialog, which) -> okListener.onItemClick(which));
+
+        builder.setPositiveButton("OK", (dialog, which) -> okListener.onOkClick());
+
+        builder.setNegativeButton("Cancel", (dialog, which) -> okListener.onCancelClick());
+
+        alertDialog = builder.create();
+
+        alertDialog.setCancelable(true);
+
+        alertDialog.show();
+    }
+
+    public static void showAlertDialogSingleChoiceOnly(Activity activity, @Nullable String title, @Nullable ArrayAdapter adapter, AlertDialogConstraintsUtils.okCancelListener okListener) {
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(activity);
+        if (title != null)
+            builder.setTitle(title);
+
+        if (adapter != null)
+            builder.setAdapter(adapter, (dialog, which) -> okListener.onItemClick(which));
+
+        builder.setPositiveButton("OK", (dialog, which) -> okListener.onOkClick());
+
+        builder.setNegativeButton("Cancel", (dialog, which) -> okListener.onCancelClick());
+
+        alertDialog = builder.create();
+
+        alertDialog.setCancelable(true);
+
+        alertDialog.show();
+    }
+
 
     public static void showBatteryLevelConstraintDialog(Activity activity, @Nullable String title) {
         AlertDialog.Builder builder = new AlertDialog.Builder(activity);
@@ -61,7 +108,7 @@ public class AlertDialogConstraintsUtils {
                     option = 3;
                     break;
             }
-            EventManagementUtil.addConstraintEvent(activity, 1, new EventValue(option, String.valueOf(batteryLevelValue)));
+            //EventManagementUtil.addConstraintEvent(activity, 1, new EventValue(option, String.valueOf(batteryLevelValue)));
         });
         builder.create().show();
     }

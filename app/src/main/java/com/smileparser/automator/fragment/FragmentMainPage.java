@@ -71,9 +71,9 @@ public class FragmentMainPage extends Fragment {
             }
             arguments.putString("callingPage", page);
 
-            /*ActivityCreateMacroPage.getInstance().loadInnerFragment(arguments, new FragmentChildPage(), page.equals("1") ? "Create_Triggers" : page.equals("2") ? "Create_Actions" : "Create_Constraints");*/
+            ActivityCreateMacroPage.getInstance().loadInnerFragment(arguments, new FragmentChildPage(), page.equals("1") ? "Create_Triggers" : page.equals("2") ? "Create_Actions" : "Create_Constraints");
 
-            ActivityCreateMacroPage.getInstance().loadInnerFragmentByType(arguments, page, page.equals("1") ? "Create_Triggers" : page.equals("2") ? "Create_Actions" : "Create_Constraints");
+            /*ActivityCreateMacroPage.getInstance().loadInnerFragmentByType(arguments, page, page.equals("1") ? "Create_Triggers" : page.equals("2") ? "Create_Actions" : "Create_Constraints");*/
         });
 
         return rootView;

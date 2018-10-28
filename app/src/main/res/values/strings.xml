@@ -58,97 +58,71 @@
     <string name="tr_location_labels">Location triggers</string>
     <string name="tr_location_image">location_trigger</string>
 
-    <!-- action_inner_frg-->
-    <!--action_icon_img-->
-    <string name="action_icon_img">
-        application_icon,camera_icon,connectivity_iconn,date_time_icon,device_actions,device_settings_icon,location_icon,media_iconn,messaging_iconn,phone_iconn,screen_iconn,volume_iconn
-    </string>
-    <!-- application_data-->
-    <string name="action_application_data">App Enable/Disable,clear App Data,Kill Application,Kill Application Process,Launch Application,Launch Shortcut,Locate/Tasker plugin,Open Website/HTTP GET,Shell Script</string>
-    <!-- application_img-->
-    <string name="action_application_img">app_enable_disable,clear_app_data,kill_application,kill_application_process,launch_application,launch_shortcut,locale_tasker_plugin,open_website_http_get,shell_script</string>
-    <!--_camrea_photo_data-->
+    <!--Actions start-->
+    <string name="action_icon_img">application_icon,camera_icon,connectivity_iconn,date_time_icon,device_actions,device_settings_icon,location_icon,media_iconn,messaging_iconn,phone_iconn,screen_iconn,volume_iconn</string>
+
+    <string name="ap_application_labels">App Enable/Disable,clear App Data,Kill Application,Kill Application Process,Launch Application,Launch Shortcut,Locate/Tasker plugin,Open Website/HTTP GET,Shell Script</string>
+    <string name="ap_application_image">app_enable_disable,clear_app_data,kill_application,kill_application_process,launch_application,launch_shortcut,locale_tasker_plugin,open_website_http_get,shell_script</string>
+
     <string name="action_camera_photo_data">Share Last Photo,Take Picture,Take Screenshoot</string>
-    <!--camrea_photo_img-->
     <string name="action_camera_photo_img">share_last_photo,take_picture,take_screenshot</string>
-    <!--connectivity_data-->
+
     <string name="action_connectivity_data">Airplane mode on/off,Auto sync on/off,Bluetooth,Mobile data on/off</string>
-    <!--connectivity_img-->
     <string name="action_connectivity_img">airplane_mode_onoff,auto_sync_onoff,bluetooth,mobile_data_onoff</string>
-    <!--Date_time_data-->
+
     <string name="action_date_time_data">Alarm Clock,Say Current Time,Stopwatch</string>
-    <!--date_time_img-->
     <string name="action_datetime_img">alarm_lock,say_current_time,stopwatch</string>
-    <!--device_action_data-->
+
     <string name="action_device_action_data">Launch home screen,Press back button,Reboot/Power off,Speak text,Vibrate</string>
-    <!--device_action_img-->
     <string name="action_device_action_img">launch_home_screen,press_back_button,reboot_power_off,speak_text,vibrate</string>
-    <!--device_setting_data-->
+
     <string name="action_device_setting_data">Auto rotate on/off,Battery saver</string>
-    <!--device_setting_img-->
     <string name="action_device_setting_img">auto_rotate_onoff,battery_saver</string>
-    <!--location_data-->
+
     <string name="action_location_data">Force Location Update,GPS Enable/Disable,Location Mode,Set Location Upadte Rate,Share Location</string>
-    <!--location_img-->
     <string name="action_location_img">force_locationupdate,gps_enable_disable,location_mode,set_location_update_rate,share_location</string>
-    <!--media_data-->
+
     <string name="action_media_data">Control Media,Play/Stop Sound,Record Microphone</string>
-    <!--media_img-->
     <string name="action_media_img">control_media,play_stop_sound,record_microphone</string>
-    <!--messaging_data-->
+
     <string name="action_messaging_data">Send Email,Send SMS,Tweet,UDP Command</string>
-    <!--messaging_img-->
     <string name="action_messanging_img">send_email,send_sms,tweet,upd_command</string>
-    <!--phone_data-->
+
     <string name="action_phone_data">Answer Call,Call Rejet,Clear Call Log,Make Call,Open Call Log,Ringtone Configure</string>
-    <!--phone_img-->
     <string name="action_phone_img">answer_call,call_reject,clear_call_log,make_call,open_call_log,ringer_volume</string>
-    <!--screen_data-->
+
     <string name="action_screen_data">Brightness,Dim Screen,Force Screen Rotation,Keep Device Awake,Screen On/Off,Set Screen Timeout</string>
-    <!--screen_img-->
     <string name="action_screen_img">brightness,dim_screen,force_screen_rotation,keep_device_awake,screen_on_off,set_screen_timeout</string>
-    <!--volume_data-->
+
     <string name="action_volume_data">priority Mode/Do Not Disturb,Speakerphone On/Off,Vibrate Enable/Disable,Volume Change,Volume Up/Down</string>
-    <!--volume_img-->
     <string name="action_voume_img">priority_modedo_not_disturb,speakerphone_onoff,vibrate_enable_disable,volume_change,volume_updown</string>
 
-
-    <!-- constraint_inner_frg-->
-    <!-- constraint_icon_img-->
+    <!--Constraint start-->
     <string name="constraint_icon_img">battery_icon,connectivity_icon,date_icon,state_icon,media_icon,phone_icon,speaker_icon,sensor_icon</string>
-    <!--battery_data-->
-    <string name="constraint_bettery">Battery level,Battery Saver State,Power Connected</string>
-    <!--battery_img-->
-    <string name="constraint_bettrey_img">battery_level,battery_saver_state,power_connected</string>
-    <!--connectivity_data-->
-    <string name="constraint_connectivity_data">Bluetooth State,GPS state,Location mode,Wifi state,Mobile data on/off</string>
-    <!--connectivity_img-->
-    <string name="constraint_connectivity_img">bluetooth_state,gps_state,location_mode,wifi_state,mobile_data_onoff</string>
-    <!--date_data-->
-    <string name="constraint_date_time_data">Calender Entry,Day of the Month,Day of the Week,Month of the Year,Stopwatch,Device State</string>
-    <!--_date_img-->
-    <string name="constraint_date_time_img">calender_entry,day_of_the_month,day_of_the_week,month_of_the_year,stopwatch,device_state</string>
-    <!--device_state_data-->
-    <string name="constraint_device_state_data">Airplane mode,Application running,Auto rotate,Auto sync,Deviced locked/unlocked,Auto sync,Time since boot</string>
-    <!--device_state_img-->
-    <string name="constraint_device_state_img">airplane_mode,application_running,auto_rotate,auto_sync,device_locked_unlocked,auto_sync,light_sensor</string>
-    <!--media_data-->
-    <string name="constraint_media_data">Headphone Connection,Music Active,</string>
-    <!--media_img-->
-    <string name="constraint_media_img">headphone_connection,music_active</string>
-    <!--phone_data-->
-    <string name="constraint_phone_data">Call State,Phone Ringing</string>
-    <!--phone_img-->
-    <string name="constraint_phone_img">call_state,phone_ringing</string>
-    <!--screen_sensor_data-->
-    <string name="constraint_screen_sensor_data">Brightness,Ringing Volume,Screen on/off,Speakerphone on/off,Volume level</string>
-    <!--screen_senor_img-->
-    <string name="constraint_screen_sensor_img">brightness,ringer_volume,screen_onoff,speakerphone_onoff,volume_level</string>
-    <!--sensors_data-->
-    <string name="constraint_sensors_data">Device Facing,Device Orientation,Light Sensor,Proximity Sensor,</string>
-    <!--sensors_img-->
-    <string name="constraint_sensors_img">device_facing,device_orientation,light_sensor,proximity_sensor</string>
 
+    <string name="constraint_bettery">Battery level,Battery Saver State,Power Connected</string>
+    <string name="constraint_bettrey_img">battery_level,battery_saver_state,power_connected</string>
+
+    <string name="constraint_connectivity_data">Bluetooth State,GPS state,Location mode,Wifi state,Mobile data on/off</string>
+    <string name="constraint_connectivity_img">bluetooth_state,gps_state,location_mode,wifi_state,mobile_data_onoff</string>
+
+    <string name="constraint_date_time_data">Calender Entry,Day of the Month,Day of the Week,Month of the Year,Stopwatch,Device State</string>
+    <string name="constraint_date_time_img">calender_entry,day_of_the_month,day_of_the_week,month_of_the_year,stopwatch,device_state</string>
+
+    <string name="constraint_device_state_data">Airplane mode,Application running,Auto rotate,Auto sync,Deviced locked/unlocked,Auto sync,Time since boot</string>
+    <string name="constraint_device_state_img">airplane_mode,application_running,auto_rotate,auto_sync,device_locked_unlocked,auto_sync,light_sensor</string>
+
+    <string name="constraint_media_data">Headphone Connection,Music Active,</string>
+    <string name="constraint_media_img">headphone_connection,music_active</string>
+
+    <string name="constraint_phone_data">Call State,Phone Ringing</string>
+    <string name="constraint_phone_img">call_state,phone_ringing</string>
+
+    <string name="constraint_screen_sensor_data">Brightness,Ringing Volume,Screen on/off,Speakerphone on/off,Volume level</string>
+    <string name="constraint_screen_sensor_img">brightness,ringer_volume,screen_onoff,speakerphone_onoff,volume_level</string>
+
+    <string name="constraint_sensors_data">Device Facing,Device Orientation,Light Sensor,Proximity Sensor,</string>
+    <string name="constraint_sensors_img">device_facing,device_orientation,light_sensor,proximity_sensor</string>
 
     <!--Day week Trigger-->
     <string-array name="dayOfWeekList">

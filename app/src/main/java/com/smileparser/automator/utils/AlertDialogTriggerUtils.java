@@ -44,9 +44,9 @@ public class AlertDialogTriggerUtils {
             builder.setTitle(title);
 
         if (adapter != null)
-            builder.setAdapter(adapter, (dialog, which) -> selectedItem = which);
+            builder.setAdapter(adapter, (dialog, which) -> okListener.onItemClick(which));
 
-        builder.setPositiveButton("OK", (dialog, which) -> okListener.onItemClick(selectedItem));
+        builder.setPositiveButton("OK", (dialog, which) -> okListener.onOkClick());
 
         alertDialog = builder.create();
 

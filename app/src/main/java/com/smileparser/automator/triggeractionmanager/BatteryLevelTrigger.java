@@ -24,6 +24,12 @@ public class BatteryLevelTrigger implements Triggerable {
         this.triggerDetails = triggerDetails;
     }
 
+    public static boolean isCharging(Context context) {
+        Intent intent = context.registerReceiver(null, new IntentFilter(Intent.ACTION_BATTERY_CHANGED));
+        int charging = intent.getIntExtra(BatteryManager.EXTRA_STATUS, -1);
+        return charging == BatteryManager.BATTERY_STATUS_CHARGING || charging == BatteryManager.BATTERY_STATUS_FULL;
+    }
+
     @Override
     public void registerEvent(OnTriggerListener onTriggerListener) {
         this.onTriggerListener = onTriggerListener;
@@ -64,11 +70,5 @@ public class BatteryLevelTrigger implements Triggerable {
                     break;
             }
         }
-    }
-
-    public static boolean isCharging(Context context) {
-        Intent intent = context.registerReceiver(null, new IntentFilter(Intent.ACTION_BATTERY_CHANGED));
-        int charging = intent.getIntExtra(BatteryManager.EXTRA_STATUS, -1);
-        return (charging == BatteryManager.BATTERY_STATUS_CHARGING || charging == BatteryManager.BATTERY_STATUS_FULL) ? true : false;
     }
 }

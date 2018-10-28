@@ -1,25 +1,30 @@
 package com.smileparser.automator.db_helper;
 
+import com.google.gson.annotations.SerializedName;
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
 
 import java.io.Serializable;
 
 @DatabaseTable(tableName = ActionModel.TABLE_NAME, daoClass = CustomDao.class)
-public class ActionModel implements Serializable {
+public class ActionModel implements  Serializable{
 
     static final String TABLE_NAME = "ActionModel";
 
     @DatabaseField(columnName = "aId", generatedId = true, allowGeneratedIdInsert = true)
+    @SerializedName("Id")
     private Long Id;
 
     @DatabaseField(columnName = "aMacroId")
+    @SerializedName("macroId")
     private Long macroId;
 
     @DatabaseField(columnName = "aActionId")
+    @SerializedName("actionId")
     private Long actionId;
 
-    @DatabaseField(columnName = "tEventValue")
+    @DatabaseField(columnName = "tEventValue", persisterClass = SerializableCollectionsType.class)
+    @SerializedName("tValue")
     private EventValueModel tValue;
 
     public ActionModel() {

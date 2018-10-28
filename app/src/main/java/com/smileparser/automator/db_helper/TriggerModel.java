@@ -1,23 +1,30 @@
 package com.smileparser.automator.db_helper;
 
+import com.google.gson.annotations.SerializedName;
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
 import com.smileparser.automator.utils.Utility;
 
-@DatabaseTable(tableName = TriggerModel.TABLE_NAME, daoClass = CustomDao.class)
-public class TriggerModel {
+import java.io.Serializable;
+
+@DatabaseTable(tableName = TriggerModel.TABLE_NAME)
+public class TriggerModel implements Serializable {
     static final String TABLE_NAME = "TriggerModel";
 
     @DatabaseField(columnName = "tId", generatedId = true, allowGeneratedIdInsert = true)
+    @SerializedName("Id")
     private Long Id;
 
-    @DatabaseField(columnName = "tEventValue", foreign = true, foreignAutoCreate = true, foreignAutoRefresh = true)
+    @DatabaseField(columnName = "tEventValue", persisterClass = SerializableCollectionsType.class)
+    @SerializedName("tValue")
     private EventValueModel tValue;
 
     @DatabaseField(columnName = "tTriggerId")
+    @SerializedName("TriggerId")
     private Long TriggerId;
 
     @DatabaseField(columnName = "tMacroId")
+    @SerializedName("MacroId")
     private Long MacroId;
 
     public TriggerModel() {

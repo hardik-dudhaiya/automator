@@ -53,12 +53,9 @@ public final class AppLaunchActionDialogManager extends DialogManager {
             }
         });
 
-        builderSingle.setAdapter(arrayAdapter, new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                AppInfo appInfo = arrayAdapter.getItem(which);
-                addActionEvent(1, new EventValue(0, appInfo.getPackageInfo().packageName));
-            }
+        builderSingle.setAdapter(arrayAdapter, (dialog, which) -> {
+            AppInfo appInfo = arrayAdapter.getItem(which);
+            addActionEvent(1, new EventValue(0, appInfo.getPackageInfo().packageName));
         });
         builderSingle.show();
     }
